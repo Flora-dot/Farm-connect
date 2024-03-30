@@ -4,8 +4,8 @@ import CarbonSecurityIcon from '../../assets/icons/carbon-security.svg';
 import RequestIcon from '../../assets/icons/request-icon.svg';
 import WorkerIcon from '../../assets/icons/worker-icon.svg';
 import PowerOutlineIcon from '../../assets/icons/power-outline-icon.svg';
-import CarbonAgricIcon from '../../assets/icons/carbon-agric-icon.svg';
-import MarketStallIcon from '../../assets/icons/market-stall-icon.svg';
+import CarbonAgricIcon from '../../assets/icons/carbon-agric-green-icon.svg';
+import MarketStallIcon from '../../assets/icons/market-stall-green-icon.svg';
 
 export const missions = [
     {

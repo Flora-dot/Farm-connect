@@ -9,32 +9,36 @@ import MarketStallIcon from '../../assets/icons/market-stall-green-icon.svg';
 
 export const missions = [
     {
-        image: TwoPeopleIcon,
-        description: 'I really love the platform. Its so reliable and the customer service is top notch. I would recommend any day any time'
+        image: MarketStallIcon,
+        description: 'To empower farmers by providing them with a user-friendly platform to showcase their products and connect directly with buyers.'
     },
     {
         image: BicycleIcon,
-        description: 'I really love the platform. Its so reliable and the customer service is top notch. I would recommend any day any time'
+        description: 'To leverage technology in increasing visibility for farmers, enhance market access, and streamline the supply chain.x.'
     },
     {
         image: CarbonAgricIcon,
-        description: 'I really love the platform. Its so reliable and the customer service is top notch. I would recommend any day any time'
+        description: 'To ultimately create a more equitable and sustainable agricultural marketplace for all stakeholders involved.'
     },
     {
         image: CarbonSecurityIcon,
         description: 'I really love the platform. Its so reliable and the customer service is top notch. I would recommend any day any time'
     },
+   
+]
+
+export const visions = [
     {
         image: RequestIcon,
-        description: 'I really love the platform. Its so reliable and the customer service is top notch. I would recommend any day any time'
+        description: 'To transform the agricultural industry.'
     },
     {
         image: WorkerIcon,
-        description: 'I really love the platform. Its so reliable and the customer service is top notch. I would recommend any day any time'
+        description: 'To create a digital ecosystem where farmers can seamlessly connect with consumers, market vendors, and manufacturing companies.'
     },
     {
-        image: MarketStallIcon,
-        description: 'I really love the platform. Its so reliable and the customer service is top notch. I would recommend any day any time'
+        image: TwoPeopleIcon,
+        description: 'To foster transparency, efficiency, and sustainability in food production and distribution.'
     },
     {
         image: PowerOutlineIcon,

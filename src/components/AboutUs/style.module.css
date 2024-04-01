@@ -93,6 +93,7 @@
     box-shadow: 4px 4px 30px #0000001F;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .mission-card .mission-icon {

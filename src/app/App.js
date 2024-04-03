@@ -1,5 +1,6 @@
 import Landing  from './pages/Landing';
 import { Login } from './pages/Login';
+import {AboutUs} from './pages/AboutUs'
 import { NotFound } from './pages/NotFound';
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
@@ -21,6 +22,10 @@ const route = createBrowserRouter([
   {
     path: '/Login',
     element: <Login />
+  },
+  {
+    path: '/AboutUs',
+    element: <AboutUs />
   },
   {
     path: '*',

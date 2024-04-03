@@ -5,12 +5,19 @@ import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ContactUsPage } from './pages/ContactUsPage';
+
 
 const route = createBrowserRouter([
   {
     path: '',
-    element: <Landing />,
+    element: <ContactUsPage/>,
   },
+  {
+    path: '',
+    element: <Landing />
+  },
+  
   {
     path: '/Login',
     element: <Login />

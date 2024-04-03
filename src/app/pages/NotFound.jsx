@@ -1,4 +1,4 @@
-import style from './NotFound.module.css';
+import style from '../pages/css/NotFound.module.css';
 import { Link } from "react-router-dom";
 import OopsIcon from '../../assets/icons/oops-icon.png';
 

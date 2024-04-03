@@ -5,12 +5,13 @@ import CustomButton from "../../components/CustomButton";
 import style from "../pages/css/Login.module.css";
 import { ConnectAudience } from "../../components/ConnectAudience/ConnectAudience";
 import { Logo } from "../../components/Logo";
-import { auth } from "../../firebase/firebaseConfig";
+import { auth, provider } from "../../firebase/firebaseConfig";
 import React from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 
-export function Login() {
+export function SignUp() {
+  // Managae manual sign up
   const [userCredentials, setUserCredentials] = React.useState();
   const [error, setError] = React.useState();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -19,24 +20,19 @@ export function Login() {
 
   const handleCredentials = (e) => {
     setUserCredentials({ ...userCredentials, [e.target.name]: e.target.value });
+    console.log(userCredentials);
   };
 
-  // Manual sign in with firebase
-  const handleLogin = (e) => {
+  const handleSignUp = (e) => {
     setIsSubmitting(true);
     e.preventDefault();
 
-    // Check if email and password fields are empty
-    // if (
-    //   !userCredentials.email.target.value ||
-    //   !userCredentials.password.target.value
-    // ) {
-    //   setError("Please fill in all fields.");
-    //   toast("Please fill in all fields.");
-    //   return;
-    // }
-
-    signInWithEmailAndPassword(
+    // compare password and confirm password
+    if (userCredentials.password === userCredentials.confirmpassword) {
+      toast("Passwords don't match");
+      return setError("Passwords don't match");
+    }
+    createUserWithEmailAndPassword(
       auth,
       userCredentials.email,
       userCredentials.password
@@ -44,13 +40,11 @@ export function Login() {
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
-        const username = userCredentials.email;
-        toast(`Signed in as ${username}`);
+        console.log(user);
+        toast("Account created successfully");
         setTimeout(() => {
-          window.location.href = "/";
-        }, 1000);
-        // localStorage.setItem('user', )
-        // ...
+            window.location.href="/"
+        }, 1000)
       })
       .catch((error) => {
         setError(error.message);
@@ -65,19 +59,27 @@ export function Login() {
     <section className={style["login-section"]}>
       <div className={style["login-details"]}>
         <Logo />
-        <h2>Welcome back Zainab</h2>
+        <h2>Create an Account</h2>
         <div className={style["option-login-btn"]}>
           <CustomButton className={style["facebook-btn"]}>
             <img src={FacebookIcon} alt="" /> Facebook
           </CustomButton>
-
           <CustomButton className={style["google-btn"]}>
             <img src={GoogleIcon} alt="" />
-            Sign in with Google
+            Sign up with Google
           </CustomButton>
         </div>
         <p className={style.or}>Or</p>
         <form action="">
+          <label htmlFor="fullname">Enter your name</label>
+          <input
+            onChange={handleCredentials}
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Email your full name"
+            required
+          />
           <label htmlFor="email">Email</label>
           <input
             onChange={handleCredentials}
@@ -97,26 +99,32 @@ export function Login() {
             placeholder="Password"
             required
           />
+          <label htmlFor="category">Confirm Password</label>
+          <input
+            onChange={handleCredentials}
+            type="password"
+            id="confirm-password"
+            name="confirmpassword"
+            placeholder="Confirm Password"
+            required
+          />
           <CustomButton
-            onClick={handleLogin}
+            onClick={handleSignUp}
             type="submit"
-            className={style["login-btn"]}
-            children={"Login"}
+            className={style["signup-btn"]}
+            children={"Create Account"}
             disabled={isSubmitting}
           />
-          <a href="/forgot" className={style["forgot-password"]}>
-            Forgot your password?
-          </a>
         </form>
         <p className={style["sign-up-cta"]}>
-          Don't have an account?{" "}
-          <span>
-            <Link to="/signup">Sign Up</Link>
-          </span>
+          Already have an account? <span><Link to="/login">Login</Link></span>
         </p>
       </div>
       <div className={style["login-image"]}>
-        <ConnectAudience className={style["connect-audience"]} />
+        <ConnectAudience
+          className={style["connect-audience"]}
+          id="connect-audience-signup"
+        ></ConnectAudience>
       </div>
     </section>
   );

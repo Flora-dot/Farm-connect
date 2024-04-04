@@ -1,0 +1,39 @@
+.not-found {
+    background-color: var(--light-color-green);
+    color: var(--primary-color-green);
+    padding: 30px 0;
+    height: 100vh;
+}
+
+.not-found-content {
+    padding: 10px 0;
+    margin: auto auto;
+    text-align: center;
+}
+
+.not-found-content h1 {
+    font-size: 2rem;
+    /* text-shadow: 2px 2px #F5CD2B; */
+}
+
+.not-found-content h1 span {
+    color: var(--color-blue);
+}
+
+.not-found-content button {
+    width: 172px;
+    height: 54px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color-green);
+    margin: 15px 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 500px) {
+    .not-found-content img {
+        width: 70%;
+     }
+     
+}

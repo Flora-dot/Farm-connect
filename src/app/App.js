@@ -2,6 +2,7 @@ import Landing  from './pages/Landing';
 import { Login } from './pages/Login';
 import {AboutUs} from './pages/AboutUs'
 import { NotFound } from './pages/NotFound';
+import {ContactUsPage} from './pages/ContactUsPage';
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
@@ -19,6 +20,10 @@ const route = createBrowserRouter([
   {
     path: '/AboutUs',
     element: <AboutUs />
+  },
+  {
+    path: '/ContactUs',
+    element: <ContactUsPage />
   },
   {
     path: '*',

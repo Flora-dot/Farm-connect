@@ -19,7 +19,7 @@
     height: 700px;
     width: 1408px;;
     flex-shrink: 0;
-    background-image: url(../../Assets/Images/contactimg.png);
+    background-image: url(../../assets/Images/contactimg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -250,7 +250,7 @@ textarea{
 }
 
 .newsLetter{
-    background-image: url(../../Assets/Images/leaf.png);
+    background-image: url(../../assets/Images/leaf.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

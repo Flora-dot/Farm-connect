@@ -1,0 +1,39 @@
+.connect-audience {
+    /* width: 60%; */
+    height: 700px;
+    background-image: url(../../assets/images/farmers.jpg);
+    background-position: center;
+    background-size: cover;     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.connect-audience-title {
+    width: 337px;
+    height: 204px;
+    text-align: center;
+    display: inline-flex;
+    padding: 8px 10px;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    border: 1px solid var(--accent-color);
+    background: rgba(38, 82, 53, 0.32);
+    color: white;
+}
+
+
+
+/* Media queries */
+@media (max-width:500px) {
+    .connect-audience {
+        display: none;
+    }
+
+    .connect-audience-title {
+        display: none;
+    }
+}

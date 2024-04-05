@@ -24,12 +24,11 @@
 .option-login-btn {
     display: flex;
     gap: 20px;
-    /* justify-content: ; */
+    align-items: center;
 }
-.facebook-btn,
-.google-btn{
-    width: 50%;
-    height: 44px;
+.facebook-btn{
+    width: 48%;
+    height: 38px;
     margin: 10px 0;
     font-size: 14px;
     font-style: normal;
@@ -48,12 +47,6 @@
     border-radius: 4px;
     background: #1877F2;
     color: #fff;
-}
-
-.google-btn{
-    background-color: transparent;
-    border-radius: 4px;
-    background: var(--Neutral-Colors-White, #F5F5F5);
 }
 
 .or {
@@ -131,6 +124,10 @@ a.forgot-password {
 
 .sign-up-cta span {
     font-weight: 600;
+    
+}
+
+.sign-up-cta span .signup {
     color: var(--primary-color-green);
 }
 

@@ -8,6 +8,7 @@ import { Logo } from "../../components/Logo";
 import { auth, provider } from "../../firebase/firebaseConfig";
 import React from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { GoogleLogin } from "@react-oauth/google";
 import { Link } from "react-router-dom";
 
 export function SignUp() {
@@ -43,8 +44,8 @@ export function SignUp() {
         console.log(user);
         toast("Account created successfully");
         setTimeout(() => {
-            window.location.href="/"
-        }, 1000)
+          window.location.href = "/";
+        }, 1000);
       })
       .catch((error) => {
         setError(error.message);
@@ -64,10 +65,18 @@ export function SignUp() {
           <CustomButton className={style["facebook-btn"]}>
             <img src={FacebookIcon} alt="" /> Facebook
           </CustomButton>
-          <CustomButton className={style["google-btn"]}>
-            <img src={GoogleIcon} alt="" />
-            Sign up with Google
-          </CustomButton>
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              console.log(credentialResponse);
+              toast(`Signed up with Google `);
+              setTimeout(() => {
+                window.location.href = "/";
+              }, 1000);
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
         </div>
         <p className={style.or}>Or</p>
         <form action="">
@@ -117,7 +126,10 @@ export function SignUp() {
           />
         </form>
         <p className={style["sign-up-cta"]}>
-          Already have an account? <span><Link to="/login">Login</Link></span>
+          Already have an account?{" "}
+          <span>
+            <Link className={style['signup']} to="/login">Login</Link>
+          </span>
         </p>
       </div>
       <div className={style["login-image"]}>

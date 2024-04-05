@@ -8,6 +8,7 @@ import { Logo } from "../../components/Logo";
 import { auth } from "../../firebase/firebaseConfig";
 import React from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { GoogleLogin } from "@react-oauth/google";
 import { Link } from "react-router-dom";
 
 export function Login() {
@@ -25,16 +26,6 @@ export function Login() {
   const handleLogin = (e) => {
     setIsSubmitting(true);
     e.preventDefault();
-
-    // Check if email and password fields are empty
-    // if (
-    //   !userCredentials.email.target.value ||
-    //   !userCredentials.password.target.value
-    // ) {
-    //   setError("Please fill in all fields.");
-    //   toast("Please fill in all fields.");
-    //   return;
-    // }
 
     signInWithEmailAndPassword(
       auth,
@@ -71,10 +62,18 @@ export function Login() {
             <img src={FacebookIcon} alt="" /> Facebook
           </CustomButton>
 
-          <CustomButton className={style["google-btn"]}>
-            <img src={GoogleIcon} alt="" />
-            Sign in with Google
-          </CustomButton>
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              console.log(credentialResponse);
+              toast(`Signed in with Google `);
+              setTimeout(() => {
+                window.location.href = "/";
+              }, 1000);
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
         </div>
         <p className={style.or}>Or</p>
         <form action="">
@@ -111,7 +110,9 @@ export function Login() {
         <p className={style["sign-up-cta"]}>
           Don't have an account?{" "}
           <span>
-            <Link to="/signup">Sign Up</Link>
+            <Link className={style["signup"]} to="/signup">
+              Sign Up
+            </Link>
           </span>
         </p>
       </div>

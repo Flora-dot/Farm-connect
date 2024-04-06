@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  background-color: #b9b5b5;
+  height: 60vh;
+  padding: (--padding-inline);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section .reviews .header {
+  text-align: center;
+  color: #000;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-block: 2em;
+}
+
+.reviews {
+  display: flex;
+  color: #2e2d2d;
+  gap: 40px;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  justify-content: center;
+  color: #898e8a;
+  font-family: Jost;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  flex-wrap: wrap;
+  margin-block: 3em;
+}
+.flex {
+  height: 15.6625rem;
+  width: 17.3125rem;
+  flex-shrink: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 0.8em;
+}
+
+.flex p {
+  width: 200px;
+  padding-block: 0.8em;
+}
+
+.flex .title {
+  text-align: left;
+  margin-bottom: 1.8em;
+}
+
+.reviews img {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .section,
+  .reviews {
+    display: block;
+    height: 90vh;
+  }
+  .reviews p {
+    padding-bottom: 2rem;
+  }
+  .reviews img {
+    margin-left: 5rem;
+  }
+}

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f5f5f5;
 }
 
 .App-logo {
@@ -35,4 +36,158 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.getBtn {
+  background-color: #000000;
+  padding: 1em 1.9em;
+  border-radius: 50px;
+  border: 2px solid #000000;
+  font-family: Helvetica;
+  font-size: 0.79rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 0.5em;
+  cursor: pointer;
+  color: var(--mainSectionOne-text-color);
+}
+
+.seeBtn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding: 1em 1.9em;
+  border-radius: 50px;
+  font-family: Helvetica;
+  font-size: 0.79rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--mainSectionOne-text-color);
+}
+
+@media (max-width: 768px) {
+  .getBtn {
+    margin-inline: auto;
+  }
+
+  .getBtn,
+  .seeBtn {
+    padding: 0.63em 1.25em;
+    text-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+    font-size: 0.7rem;
+  }
+}
+
+.filter {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 0.625rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  border: 1px solid var(--Brand-Colors-400);
+  background-color: transparent;
+  margin: left 0.88em;
+}
+.filter img {
+  width: 24px;
+  height: 24px;
+}
+
+.account {
+  position: relative;
+  display: inline-block;
+}
+.account .account-btn {
+  border-radius: 0.25rem;
+  border: 1px solid var(--Brand-Colors-Main);
+  padding: 0.38em 0.63em;
+  background: transparent;
+  color: #000;
+  font-family: Jost;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background 0.15s, color 0.15s;
+}
+.account .options-list {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.31em 0;
+  list-style: none;
+}
+
+.options-list li {
+  padding: 0.31em 0.63em;
+}
+
+.options-list li a {
+  text-decoration: none;
+  /* color: #333; */
+  color: #000;
+}
+
+.options-list li a:hover {
+  background-color: #f0f0f0;
+}
+
+.account .account-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5em;
+}
+
+.account .account-btn:hover {
+  background: var(--Brand-Colors-Main);
+  color: #fff;
+}
+
+.account.open .account-btn .rotate {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .filter,
+  .filter img {
+    display: none;
+  }
+}
+
+.custom-btn .mainBtn {
+  color: #f5f5f5;
+  border-radius: 0.25rem;
+  background: var(--Brand-Colors-Main);
+  border: 1px solid var(--Brand-Colors-Main);
+  font-family: Jost;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.2em 9em;
+  text-align: center;
+}
+.custom-btn {
+  position: relative;
+}
+
+.mini {
+  color: #f5f5f5;
+  font-family: Jost;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.63em 2em;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  background-color: var(--Brand-Colors-Main);
 }

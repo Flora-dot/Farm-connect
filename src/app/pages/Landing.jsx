@@ -1,8 +1,22 @@
-
+import { LandingHeader } from '../components/Header/LandingHeader';
+import { Hero } from '../components/Hero';
+import { PopularItems } from '../components/PopularItems';
+import { ProductSection } from '../components/ProuctDetails';
+import { Ratings } from '../components/Ratings';
+import { Agency } from '../components/Agency';
+import { Reviews } from '../components/Reviews';
+import { Footer } from '../components/Footer';
 export default function Landing() {
-    return(
-        <div>
-            This is the landing page
-        </div>
-    );
+  return (
+    <div>
+      <LandingHeader />
+      <Hero />
+      <Ratings />
+      <ProductSection />
+      <PopularItems />
+      <Agency />
+      <Reviews />
+      <Footer />
+    </div>
+  );
 }

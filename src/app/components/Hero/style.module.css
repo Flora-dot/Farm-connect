@@ -16,6 +16,7 @@
   padding-bottom: 2em;
   margin-bottom: 2em;
   min-height: 100vh;
+  overflow: hidden;
 }
 .description {
   display: flex;
@@ -138,10 +139,40 @@
   display: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1024px) {
+  .hero-container {
+    position: static;
+    padding-inline: 4%;
+  }
+  .description-img {
+    height: 625px;
+    flex: 1;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .description .text P {
+    font-size: 1.5rem;
+  }
+  .custom-btn .mainBtn {
+    padding: 0.75em 7em;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .advert-logo {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
+    position: static;
     padding: 0;
+    overflow: hidden;
+    margin: 0;
+    min-height: 50vh;
+    margin-bottom: 10px;
   }
 
   .hero-container .description .text {
@@ -194,9 +225,9 @@
     display: none;
   }
   .description-img {
+    position: static;
     animation: imageTransition none;
     width: 90%;
-    height: 500px;
     margin-inline: auto;
   }
 

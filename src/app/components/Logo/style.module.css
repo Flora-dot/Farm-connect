@@ -7,10 +7,25 @@
   height: 3.73281rem;
 }
 
+@media (max-width: 768px) {
+  .logo img {
+    width: 80px;
+    height: 80px;
+    padding-left: 0.8em;
+  }
+}
 @media (max-width: 500px) {
   .logo img {
-    width: 30px;
-    height: 0px;
-    padding-left: 0;
+    width: 60px;
+    height: 60px;
+    padding-left: 0.5em;
+  }
+}
+
+@media (max-width: 390px) {
+  .logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: -1em;
   }
 }

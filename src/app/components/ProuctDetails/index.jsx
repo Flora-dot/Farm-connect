@@ -1,10 +1,15 @@
 import { Products } from './data';
+import Pharrow from '../../assets/icons/pharrow.svg';
 import styles from './style.module.css';
 
 export const ProductSection = () => {
   return (
     <div className={styles['latest-offer']}>
-      <h3 className={styles.header}>Latest Offers</h3>
+      <div clasName={styles['latest-div']}>
+        <h3 className={styles.header}>Latest Offers </h3>
+        <img src={Pharrow} />
+      </div>
+
       <section className={styles.products}>
         <div className={styles.list}>
           {Products.map((product) => (

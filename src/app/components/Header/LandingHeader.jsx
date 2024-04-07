@@ -17,14 +17,12 @@ export const LandingHeader = () => {
 
   return (
     <header className='header'>
-      <div>
+      <div className='logo'>
         <SearchBar />
       </div>
-      <div>
-        <div className='menu'>
-          <MenuIcon className='menu-icon' onClick={toggleMenu} fill='black' />
-          {<HeaderNavigation className={showMenu ? 'mobile' : ''} />}
-        </div>
+      <MenuIcon className='menu-icon' onClick={toggleMenu} fill='white' />
+      <div className='menu'>
+        <HeaderNavigation className={showMenu ? 'mobile' : ''} />
       </div>
     </header>
   );
@@ -34,27 +32,33 @@ const HeaderNavigation = (props) => {
   return (
     <ul className={props.className}>
       <li>
-        <a href='#/Premium'>farm connect</a>
+        <a className='bold' href='/farm connect'>
+          farm connect
+        </a>
       </li>
       <li>
-        <a href='#/Support'>latest offers</a>
+        <a href='/latest offers'>latest offers</a>
       </li>
       <li>
-        <a href='#/Download'>crops</a>
+        <a href='/crops'>crops</a>
       </li>
       <li>
         <a href='/life stock'>life stock</a>
       </li>
       <li className='active'>
-        <a href='#/Sign up'>fruit and veggies</a>
+        <a href='/fruit and veggies'>fruit and veggies</a>
       </li>
       <li className='active'>
-        <a href='#/Login'>contact us</a>
+        <a href='/contact us'>contact us</a>
       </li>
       <li className='active'>
-        <a href='#/Login'>about us</a>
+        <a href='/about us'>about us</a>
       </li>
-      <AccountOptions />
+      <li>
+        <a className='act' href='/account'>
+          <AccountOptions />
+        </a>
+      </li>
     </ul>
   );
 };

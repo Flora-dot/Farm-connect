@@ -13,6 +13,7 @@
   list-style: none;
   display: flex;
   gap: 1.88em;
+  margin: bottom 0.9em;
 }
 
 .menu ul li a {
@@ -24,55 +25,29 @@
   font-family: Jost;
   font-size: 1rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.375rem;
+  transition: opacity 0.15s, border-bottom 0.15s;
 }
 
+.menu ul li a:hover {
+  border-bottom: 2px solid var(--Brand-Colors-Main);
+  padding-bottom: 0;
+  margin-bottom: 0;
+  opacity: 0.7;
+}
+.menu ul li .bold {
+  font-weight: bold;
+}
+.menu ul li a:active {
+  opacity: 0.7;
+}
 .menu-icon {
   display: none;
 }
 
-.menu ul .account .account-btn {
-  display: none;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .menu {
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 80px;
-    padding-left: 0.5em;
-  }
-  .menu ul,
-  .account .account-btn {
-    display: none;
-    padding: 0;
-  }
-
-  ul.mobile {
-    display: block;
-  }
-
-  .menu ul li {
-    padding: 0.63em 0;
-  }
-  .menu ul li a {
-    padding-left: 0;
-  }
-  .menu li.hidden-mobile {
-    display: none;
-  }
-}
-
 .search,
-.search .input-container,
+.input-container,
 .account-container {
   display: flex;
   justify-content: space-between;
@@ -92,7 +67,7 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  padding-left: 0.8em;
+  margin-left: 0.8em;
 }
 .account-container {
   gap: 1.3em;
@@ -145,49 +120,349 @@
   position: absolute;
   top: -14px;
   right: -1px;
-
   padding: 0.125em 0.3125em;
   color: #f11e1e;
   font-family: Jost;
   font-size: 0.875rem;
   font-weight: 400;
 }
+.menu ul .account .account-btn {
+  display: none;
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    /* display: block;
+    padding: 5px; */
+    width: 100%;
+  }
+  .logo {
+    display: block;
+  }
+  /* .truck-time,
+  .bag-timer-container {
+    display: none;
+  } */
+  .menu-icon {
+    display: block;
+    background-color: rgb(9, 9, 9);
+    position: absolute;
+    margin-left: 495px;
+    margin-top: -47px;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    background-color: #fff;
+  }
+
+  .menu ul {
+    display: none;
+    padding: 0;
+  }
+
+  ul.mobile {
+    display: block;
+  }
+  .menu ul li {
+    padding: 10px 26px;
+  }
+  .menu ul li a {
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+  .menu li.hidden-mobile {
+    display: none;
+  }
+
+  .menu ul li .account .account-btn {
+    display: block;
+    padding: 0;
+  }
+  .account-container .hello {
+    display: none;
+  }
+  .input-field {
+    display: none;
+  }
+  .act {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
   .header {
+    display: block;
+    gap: 0;
+    margin-bottom: 0;
+    max-width: 800px;
+    width: 100%;
+    height: 40px;
+    margin-inline: auto;
     padding: 0;
+    overflow: hidden;
+  }
+
+  .logo {
+    display: block;
+    margin-left: 0;
+    max-width: 100%;
+    padding-top: 0.7em;
+    margin-top: 0;
+  }
+  .truck-time,
+  .bag-timer-container {
+    display: none;
+  }
+
+  .search .search-input {
+    width: 100%;
+    padding: 0.99em;
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    right: 5%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .account-container {
     justify-content: center;
     align-items: center;
+  }
+  .menu ul {
+    display: none;
+    padding: 0;
+  }
+
+  ul.mobile {
+    display: block;
+  }
+  .menu ul li {
+    padding: 10px 26px;
+  }
+  .menu ul li a {
+    padding-left: 0;
+  }
+  .menu li.hidden-mobile {
+    display: none;
+  }
+  .search {
+    display: block;
     gap: 0;
+    margin-right: 150px;
+  }
+
+  .search .input-field img {
+    width: 1.5rem;
+  }
+
+  .menu ul li .account .account-btn {
+    display: block;
+    padding: 0;
+  }
+  .account-container .hello {
+    display: none;
   }
   .input-field {
-    width: fit-content;
+    display: none;
+  }
+  .act {
+    display: block;
+  }
+}
+
+@media (max-width: 561px) {
+  .logo {
+    margin-right: 0.5em;
+  }
+  .menu-icon {
+    top: 23%;
+  }
+  .menu ul li {
+    padding: 10px 26px;
+  }
+
+  /* .search .search-input {
+    width: 95%;
+    margin-right: 1em;
+  } */
+}
+
+@media (max-width: 500px) {
+  .header {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .menu-icon {
+    display: block;
+    background-color: rgb(9, 9, 9);
+    position: absolute;
+    margin-left: 380px;
+    margin-top: -65px;
+  }
+
+  .logo {
+    padding-top: 2em;
+    width: 100%;
   }
 
   .search {
+    display: block;
+    gap: 0;
+    margin-right: 47px;
+  }
+  @media (max-width: 425px) {
+    .menu-icon {
+      margin-left: 2em;
+      top: 27%;
+      right: 5%;
+      height: auto;
+      transform: translateY(18%);
+      margin-right: 0.2em;
+    }
+
+    .search .input-field img {
+      padding-left: 0.5em;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .menu-icon {
+      top: 27%;
+      right: 5%;
+      transform: translateY(18%);
+      margin-right: 0.2em;
+    }
+
+    .search .input-field img {
+      padding-left: 0.5em;
+    }
+  }
+
+  .search .input-field .search-input {
+    margin-right: 1.5em;
+    padding: 0.8em;
+  }
+}
+@media (max-width: 325px) {
+  .menu-icon {
+    top: 24%;
+    right: 5%;
+  }
+
+  .input-field .search-input {
+    padding-left: 1em;
+  }
+
+  .input-field img {
+    width: 12px;
+    height: 12px;
+    right: 25%;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
     padding: 0;
-    flex-direction: column;
-    align-items: none;
-    justify-content: none;
-    gap: 2em;
+    margin: 0;
+    min-height: 25vh;
+    padding-top: -3em;
+  }
+  .menu-icon {
+    margin-left: 270px;
+    margin-top: -65px;
+  }
+
+  .input-field,
+  .search-input,
+  .input-field img {
+    display: none;
+  }
+}
+
+/* @media (max-width: 500px) {
+  .header {
+    padding: 10px;
+    height: 33vh;
+    width: 200px;
+    overflow: hidden;
+  }
+  .menu-icon {
+      display: block;
+      background-color: rgba(9, 135, 30, 1);
+      position: absolute;
+      margin-left: 80px;
+      margin-top: 20px;
+  }
+
+  .menu {
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 80px;
+      padding: 10px var(--app-block-padding);
+      background-color: #fff;
+  }
+  .menu ul {
+      display: none;
+      padding: 0;
+  }
+
+  ul.mobile {
+    display: block;
+  }
+  .menu ul li {
+     padding: 6px 20px; 
+  }
+  .menu ul li a{
+      padding-left: 0;
+      padding-bottom: 20px;
+  }
+  .menu li.hidden-mobile {
+     display: none;
+  }
+  .input-field {
+    display: none;
+  }
+  .truck-time,
+  .bag-timer-container {
+    display: none;
+  }
+
+  .search {
+    display: block;
+    gap: 0;
+    margin-right: 50px;
   }
 
   .search .input-field img {
     width: 1rem;
-    height: 1rem;
+    left: 1px;
   }
 
-  .search .input-field {
-    width: 280px;
+  .menu ul li .account .account-btn {
+    display: block;
+    padding: 0;
   }
-  .search .search-input {
-    max-width: 100%;
+  .account-container .hello {
+    display: none;
   }
-  .account-container {
-    margin-left: 255px;
-  }
-  .bag-timer-container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+
+} */
+
+/* <div  <SearchBar />
+</div>
+<div className='menu'>
+ <MenuIcon className='menu-icon' onClick={toggleMenu} fill='black' />
+ {<HeaderNavigation className={showMenu ? 'mobile' : ''} />}
+</div> */

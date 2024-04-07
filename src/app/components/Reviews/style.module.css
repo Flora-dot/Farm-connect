@@ -67,16 +67,51 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 768px){ 
+  h2 {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
 @media (max-width: 600px) {
   .section,
   .reviews {
+    margin-bottom: 20px;
     display: block;
-    height: 90vh;
+    padding: 20px;
   }
-  .reviews p {
+  .reviews p{
+    text-align: center;
     padding-bottom: 2rem;
+    font-size: 14px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 14px;
+    margin-left: 2rem;
+  }
+  .flex {
+    height: 25.6625rem;
+    width: 24.3125rem;
+    margin-right: 2px;
+    padding-left: 0;
   }
   .reviews img {
-    margin-left: 5rem;
+    width: 200px;
+    height: 200px;
+    margin-left: 1rem;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px){
+  .flex {
+    height: 25.6625rem;
+    width: 18.3125rem;
+    margin-right: 2px;
+    padding-left: 0;
   }
 }

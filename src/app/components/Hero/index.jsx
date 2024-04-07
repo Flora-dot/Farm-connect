@@ -35,7 +35,7 @@ export const Hero = () => {
           </div>
         </section>
         <section className={style['description-img']}>
-          <img className={style.eclipse} src={Recipes} />
+          <img className={style.eclipse} src={Recipes} />  
         </section>
       </div>
       <img className={style['advert-logo']} src={AdvertLogo} />

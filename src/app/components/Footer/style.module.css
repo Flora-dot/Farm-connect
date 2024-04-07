@@ -2,6 +2,7 @@
   font-size: 0.75rem;
   background-color: var(--Brand-Colors-Main);
   height: 100vh;
+  overflow: hidden;
 }
 .copyMenu {
   display: flex;
@@ -133,17 +134,7 @@ nav li {
   font-style: normal;
   font-weight: 700;
 }
-.mini {
-  color: #f5f5f5;
-  font-family: Jost;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.63em 2em;
-  border-radius: 2px;
-  border: none;
-  outline: none;
-  background-color: var(--Brand-Colors-Main);
-}
+
 
 .policy {
   color: #fff;
@@ -165,6 +156,7 @@ nav li {
   .menuItem,
   .footer {
     display: block;
+    overflow: hidden;
   }
   .legal-urls,
   .copyright {
@@ -176,6 +168,10 @@ nav li {
 
   .flex {
     justify-content: center;
+  }
+  .newsletter {
+    width: 200px;
+    display: block;
   }
 }
 

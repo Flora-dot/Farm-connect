@@ -8,8 +8,6 @@
   font-family: Inter;
   font-size: 1.5rem;
   font-weight: 400;
-  padding-bottom: 0;
-  font-style: italic;
 }
 
 .products {
@@ -80,13 +78,18 @@
 .products .stars {
   font-weight: bold;
 }
-
+.latest-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 500px) {
   .products {
     padding-inline: 5%;
     color: #141e15;
     max-width: 100%;
     margin-inline: auto;
+    overflow: hidden;
   }
 
   .products .list {

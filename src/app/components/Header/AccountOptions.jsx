@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CustomButton } from '../Button';
 import DropdownIcon from '../../assets/icons/toggle-drop-down.png';
+import './Account.css'
 
 export const AccountOptions = ({ showMenu }) => {
   const [showOptions, setShowOptions] = useState(false);

@@ -122,3 +122,19 @@
   width: 2.0625rem;
   height: 2.0625rem;
 }
+
+
+@media (max-width: 768px) {
+  .agency {
+    height: 70vh;
+    overflow: hidden;
+  }
+}
+@media (max-width: 500px) {
+  .agency {
+    display: block;
+    padding: 0;
+    height: 70vh;
+    overflow: hidden;
+  }
+}

@@ -1,10 +1,16 @@
 import { popularItems } from './data';
 import styles from './style.module.css';
+import Pharrow from '../../assets/icons/pharrow.svg'
 
 export const PopularItems = () => {
   return (
     <div className={styles['latest-offer']}>
-      <h3 className={styles.header}>Popular Items</h3>
+      <h3 className={styles.header}>
+        Popular Items
+        <span>
+          <img src={Pharrow} />
+        </span>
+      </h3>
       <section className={styles.products}>
         <div className={styles.list}>
           {popularItems.map((item) => (

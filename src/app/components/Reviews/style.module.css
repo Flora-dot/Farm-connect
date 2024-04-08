@@ -67,10 +67,11 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 768px){ 
-  h2 {
+@media (max-width: 768px) {
+  .header {
     margin-top: 20px;
     text-align: center;
+    padding-top: 0;
   }
 }
 @media (max-width: 600px) {
@@ -80,10 +81,10 @@
     display: block;
     padding: 20px;
   }
-  .reviews p{
+  .reviews p {
     text-align: center;
     padding-bottom: 2rem;
-    font-size: 14px;
+    font-size: 1rem;
   }
 
   .title {
@@ -102,16 +103,29 @@
     height: 200px;
     margin-left: 1rem;
   }
-  h2 {
+  p.header {
     text-align: center;
+    padding: 0;
+    margin: 0;
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   .flex {
     height: 25.6625rem;
     width: 18.3125rem;
     margin-right: 2px;
     padding-left: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .section.reviews {
+    padding: 0;
+    margin: 0;
+  }
+
+  .flex {
+    margin-inline: auto;
   }
 }

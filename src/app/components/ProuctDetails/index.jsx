@@ -5,10 +5,12 @@ import styles from './style.module.css';
 export const ProductSection = () => {
   return (
     <div className={styles['latest-offer']}>
-      <div clasName={styles['latest-div']}>
-        <h3 className={styles.header}>Latest Offers </h3>
-        <img src={Pharrow} />
-      </div>
+      <h3 className={styles.header}>
+        Latest Offers
+        <span>
+          <img src={Pharrow} />
+        </span>
+      </h3>
 
       <section className={styles.products}>
         <div className={styles.list}>

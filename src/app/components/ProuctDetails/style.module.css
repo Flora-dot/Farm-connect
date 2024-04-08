@@ -8,8 +8,14 @@
   font-family: Inter;
   font-size: 1.5rem;
   font-weight: 400;
+  display: flex;
 }
-
+.latest-offer span img {
+  width: 32px;
+  height: 32px;
+  margin-left: 0.5em;
+  text-align: center;
+}
 .products {
   display: flex;
   justify-content: center;
@@ -78,10 +84,11 @@
 .products .stars {
   font-weight: bold;
 }
-.latest-div {
+.latest-offer .latest-div {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 @media (max-width: 500px) {
   .products {

@@ -23,21 +23,9 @@ export const Footer = () => {
           <div className={style.flex}>
             <div className={style.menuItems}>
               <div className={style.flex}>
-                <Menu
-                  className={style.telegram}
-                  title='Catalogs'
-                  options={AboutMenu}
-                />
-                <Menu
-                  className={style.telegram}
-                  title=''
-                  options={CommunitiesMenu}
-                />
-                <Menu
-                  className={style.telegram}
-                  title=''
-                  options={UsefulLinkMenu}
-                />
+                <Menu title='Catalogs' options={AboutMenu} />
+                <Menu title='' options={CommunitiesMenu} />
+                <Menu title='' options={UsefulLinkMenu} />
 
                 <Menu
                   className={style.telegram}

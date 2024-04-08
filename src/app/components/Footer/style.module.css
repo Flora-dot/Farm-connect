@@ -135,7 +135,6 @@ nav li {
   font-weight: 700;
 }
 
-
 .policy {
   color: #fff;
   font-family: Jost;
@@ -181,3 +180,8 @@ nav li {
     gap: 2.25em;
   }
 }
+
+/* @media (max-width: 768px) {
+  .social {
+    display: none;
+  } */

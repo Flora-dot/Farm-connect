@@ -143,4 +143,40 @@ export const LegalUrls = [
     name: 'follow us on',
     url: '#follow',
   },
+
+  {
+    name: '',
+    url: '',
+  },
+  {
+    name: '',
+    url: '',
+  },
+  {
+    name: null,
+    url: null,
+  },
+
+  {
+    image: Whatsapp,
+    url: '#whatsapp',
+  },
+
+  {
+    name: '',
+    url: '',
+  },
+  {
+    name: '',
+    url: '',
+  },
+  {
+    name: null,
+    url: null,
+  },
+
+  {
+    image: Telegram,
+    url: '#telegram',
+  },
 ];

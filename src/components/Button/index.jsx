@@ -1,6 +1,6 @@
 import { Children } from 'react';
 import '../Header/LandingHeader.css';
-import { combineClasses } from '../../../util/format';
+import { combineClasses } from '../util/format';
 export const CustomButton = (props) => {
   const classNames = {
     primary: 'getBtn',

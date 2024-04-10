@@ -4,7 +4,7 @@ import style from './style.module.css';
 export const Reviews = () => {
   return (
     <section>
-      <h2 className={style.header}>Reviews</h2>
+      <p className={style.header}>Reviews</p>
       <div className={style.reviews}>
         <div className={style.flex}>
           <div className={style['image-div']}>

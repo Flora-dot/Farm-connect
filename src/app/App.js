@@ -1,6 +1,7 @@
 import Landing from './pages/Landing';
 import { Login } from './pages/Login';
 import { NotFound } from './pages/NotFound';
+import { ProductCategory } from './pages/ProductCategory';
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -15,9 +16,15 @@ const route = createBrowserRouter([
     path: '/Login',
     element: <Login />,
   },
+
   {
     path: '*',
     element: <NotFound />,
+  },
+
+  {
+    path: '/RiceSession',
+    element: <ProductCategory />,
   },
 ]);
 function App() {

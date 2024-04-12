@@ -3,6 +3,7 @@ import { Login } from './pages/Login';
 import { SignUp } from './pages/SignUp';
 import {AboutUs} from './pages/AboutUs'
 import { NotFound } from './pages/NotFound';
+import {ContactUsPage} from './pages/ContactUsPage';
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
@@ -26,6 +27,9 @@ const route = createBrowserRouter([
   {
     path: '/SignUp',
     element: <SignUp />
+  },
+    path: '/ContactUs',
+    element: <ContactUsPage />
   },
   {
     path: '*',

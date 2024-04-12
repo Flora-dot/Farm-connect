@@ -28,14 +28,16 @@ const route = createBrowserRouter([
     path: '/SignUp',
     element: <SignUp />
   },
+  {
     path: '/ContactUs',
     element: <ContactUsPage />
   },
   {
     path: '*',
     element: <NotFound />
-  }
+  },
 ]);
+
 function App() {
 
  

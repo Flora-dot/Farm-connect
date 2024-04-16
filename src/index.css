@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+  --color-black: #000;
   --primary-color-green: #265235;
+  --accent-color: #F3C301;
   --light-color-green: #D4DCD7;
   --facebook-blue-color: #1877F2;
+  --Neutral-Colors-Grey-600: #898E8A;
+  --Neutral-Colors-Grey-200: #D4DCD7;
 }
 * {
   box-sizing: border-box;

@@ -1,5 +1,7 @@
 import styles from './styles.module.css'
 import ImgContact from '../../assets/images/contactimg.png'
+
+
 export const ContactUs = () => {
     return(
        <div className={styles.container}>

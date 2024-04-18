@@ -1,0 +1,336 @@
+.farmers-details,
+.reviews-more-products{
+    width: 90%;
+    margin: 70px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    /* border: 1px solid black; */
+    align-items: center;
+}
+
+.dp-holder{
+    width: 20%;
+}
+
+.farmers-details .dp {
+    width: 100%; 
+    border-radius: 10px;  
+}
+
+.details-container {
+    padding: 0 10px;
+    width: 40%;
+    /* border: 1px solid black; */
+}
+
+.farmers-details h3 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 7px;
+}
+
+.farmers-details .joined-date,
+.location-container p,
+.verified p{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 8px;
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.location-container div,
+.product-card .star-reviews {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.location-container span,
+.review-details span {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--Neutral-Colors-Gray-800);
+}
+
+.verified {
+    height: 48px;
+    width: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);   
+}
+
+.verified img {
+    width: 24px;
+    height: 24px;
+}
+
+.about h4,
+.reviews h4,
+.review-details h2 {
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-decoration: underline;
+    margin: 6px;
+}
+
+.about p,
+.product-card p {
+    color: #141E15;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+
+/* Reviews and More Products section */
+.reviews-more-products {
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+}
+.reviews {
+    width: 30%;
+    /* border: 1px solid black; */
+    padding: 5px;
+}
+
+.reviews h4 {
+    text-decoration: none  ;
+}
+
+.reviews .review-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 30px;
+}
+
+.review-details p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px
+}
+
+.review-details h2 {
+    color: #4A6F57;
+    text-decoration: none;
+}
+.review-text {
+    width: 80%;
+}
+
+/* More products from farmer */
+.more-products {
+    width: 67%;
+}
+
+.more-products .shop {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 5px;
+}
+
+.more-products-listing {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    height: 990px;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.more-products-listing:hover{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4A6F57; 
+  }
+ 
+  .more-products h4 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0 0 7px;
+  }
+
+.more-products-listing .product-card {
+    width: 250px;
+    height: 495px;
+    /* border: 1px solid black; */
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-card .details {
+    padding: 10px;
+}
+
+.product-card h1 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+.product-card h2 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--Neutral-Colors-Gray-800);
+}
+
+
+
+/* Media Queries */
+@media (max-width:1024px) {
+    .farmers-details,
+    .reviews-more-products {
+    width: 90%;
+    flex-wrap: nowrap;
+    /* border: 1px solid black; */
+    gap: 30px;
+    }
+
+    .details-container {
+        width: 60%;
+    }
+
+    .reviews {
+        width: 40%;
+    }
+
+    .reviews .review-details {
+        gap: 30px;
+    }
+
+    .more-products {
+        width: 60%;
+    }
+
+    .more-products-listing {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .more-products-listing .product-card {
+        width: 250px;
+    }
+    
+}
+
+@media (max-width:920px) {
+    .farmers-details,
+    .reviews-more-products {
+        width: 100%;
+        flex-wrap: wrap;
+        /* border: 1px solid black; */
+        gap: 30px;
+    }
+
+    .farmers-details {
+        gap: 50px;
+    }
+    
+    .dp-holder {
+        /* border: 1px solid black; */
+        width: 200px;
+    }
+
+    .reviews {
+        width: 100%;
+    }
+
+    .reviews img {
+        width: 15%;
+    }
+
+    .more-products {
+        width: 100%;
+    }
+
+    .more-products-listing {
+        grid-template-columns: repeat(3, 1fr);
+        height: auto;
+    }
+
+    .more-products-listing .product-card {
+        width: 230px;
+        gap: 10px;
+    }
+}
+
+@media (max-width:500px) {
+    .farmers-details,
+    .reviews-more-products {
+    width: 100%;;
+    gap: 30px;
+    justify-content: center;    
+    }
+
+    .dp-holder {
+        width: 200px;
+    }
+ 
+
+    .details-container {
+        width: 100%;
+    }
+
+    .reviews {
+        width: 100%;
+    }
+
+    .more-products {
+        width: 100%;
+    }
+
+    .more-products-listing {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .more-products-listing .product-card {
+        width: 180px;
+    }
+}

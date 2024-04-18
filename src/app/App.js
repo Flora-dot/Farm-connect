@@ -9,6 +9,7 @@ import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FarmerProfile } from './pages/FarmerProfile';
 
 const route = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const route = createBrowserRouter([
   {
     path: '/ContactUs',
     element: <ContactUsPage />
+  },
+  {
+    path: '/Farmerprofile',
+    element: <FarmerProfile />
   },
   {
     path: '/ProductDetail',

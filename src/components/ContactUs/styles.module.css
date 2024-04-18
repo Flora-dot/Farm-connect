@@ -16,8 +16,8 @@
     
 } */
 .container .contactImg{
-    height: 700px;
-    width: 1408px;;
+    height: 500px;
+    width: 100%;
     flex-shrink: 0;
     background-image: url(../../assets/images/contactimg.png);
     background-repeat: no-repeat;
@@ -29,17 +29,15 @@
     text-align: center;
 }
 
-.contactImg .divider{
+ .divider{
     background-color: var(--primary-color-green);
-    position: absolute;
     display: flex;
     flex-direction: column;
-    width: 1010px;
+    width: 100%;
     padding: 49px ;
     justify-content: center;
     align-items: center;
-    margin-top: 35rem;
-    margin-left: 7rem;
+    margin:0 0 25px ;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);
@@ -47,7 +45,7 @@
 
 }
 
-.contactImg .divider h3{
+ .divider h3{
     color:  #F5F5F5;
     width: 163px;
     font-family: Jost;
@@ -58,7 +56,7 @@
     
 }
 
-.contactImg .divider p{
+.divider p{
     color:  #F5F5F5;
     font-family: Jost;
     font-size: 14px;
@@ -69,7 +67,7 @@
     
 }
 
-.contactImg .divider button{
+.divider button{
     color:  #F5F5F5;
     font-family: Jost;
     font-size: 15px;
@@ -82,13 +80,14 @@
 }
 
 .wrapper{
-    width: 1010px;
+    width: 80%;
+    /* border: 1px solid black; */
     /* background-color: yellow; */
     position: relative;
-    margin-left: 7rem;
-    margin-top: 100px;
+    bottom: 32%;
+    margin: 0 auto;
     padding: 49px ;
-    z-index: -1;
+    z-index: 1;
 
 }
 
@@ -176,7 +175,7 @@ form .userImputfield{
     width: 100%;
     display: flex;
     /* background-color: aqua; */
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
     margin-bottom: 20px;
     
 }
@@ -354,54 +353,34 @@ textarea{
     color: #fff;
 }
 
-@media (max-width: 500px) {
-    .container{
-        width: 100%;
-        /* padding: 30px; */
-        text-align: center;
-        align-items: center;
-       justify-content: center;
-       align-items: center;
-    }
 
+
+@media  (max-width: 1024px) {
+    .wrapper{
+        /* width: 95%; */
+        /* border: 1px solid black; */
+         bottom: 15%;
+    }
+}
+
+@media  (max-width: 800px) {
+    form .userImputfield {
+        flex-direction: column;
+    }
+}
+
+@media  (max-width: 500px) {
     .container .contactImg{
         height: 300px;
-        width: 100vw;
-        /* background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        position: relative; */
-        justify-content: center;
-        align-items: center;
-        text-align: center;
     }
-
-    .contactImg .divider{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-        padding: 49px;
-        justify-content: center;
-        align-items: center;
-        margin-top: 15rem;
-        margin-left: 4rem;
-        text-align: center;
-        margin-right: 4rem;
-    }
-
     .wrapper{
-        width: auto;
-        /* background-color: yellow; */
-        position: relative;
-        margin-left: 0;
-        margin-top: 15rem;
-        padding: 49px;
-        z-index: -1;
+        width: 95%;
+        /* border: 1px solid black; */
+         bottom: 20%;
         display: flex;
+        padding: 15px;
         flex-direction: column;
-        flex-wrap: wrap;
-    
+        gap: 15px;
     }
 
     form{
@@ -415,8 +394,8 @@ textarea{
     form .userImputfield{
         width: 100%;
         display: flex;
-        /* background-color: aqua; */
         flex-direction: column;
+        align-items: flex-start;
         margin-bottom: 20px;
         
     }
@@ -475,7 +454,7 @@ textarea{
     .newsLetter div{
         position: relative;
         flex-direction: column;
-        margin: 10p auto;
+        margin: 10px auto;
         /* background-color: red; */
         text-align: center;
         justify-content: center;
@@ -493,43 +472,4 @@ textarea{
         margin-bottom: 20px;
 
     }
-}
-
-@media (max-width: px) {
-    .container{
-        width: 100%;
-        /* padding: 0 30px; */
-        text-align: center;
-        align-items: center;
-       justify-content: center;
-       align-items: center;
-       /* background-color: red; */
-    }
-
-    .container .contactImg{
-        height: 700px;
-        width: 100%;
-        /* background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        position: relative; */
-        /* justify-content: center;
-        align-items: center;
-        text-align: center; */
-    }
-
-    .contactImg .divider{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-        padding: 49px;
-        justify-content: center;
-        align-items: center;
-        margin-top: 15rem;
-        margin-left: 4rem;
-        text-align: center;
-        margin-right: 4rem;
-    }
-
 }

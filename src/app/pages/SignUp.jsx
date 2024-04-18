@@ -1,21 +1,26 @@
 import { toast } from "react-toastify";
 import FacebookIcon from "../../assets/icons/facebook-logo2.svg";
-import GoogleIcon from "../../assets/icons/google-icon.svg";
 import CustomButton from "../../components/CustomButton";
 import style from "../pages/css/Login.module.css";
 import { ConnectAudience } from "../../components/ConnectAudience/ConnectAudience";
 import { Logo } from "../../components/Logo";
-import { auth, provider } from "../../firebase/firebaseConfig";
+import { auth} from "../../firebase/firebaseConfig";
 import React from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { GoogleLogin } from "@react-oauth/google";
 import { Link } from "react-router-dom";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 export function SignUp() {
   // Managae manual sign up
   const [userCredentials, setUserCredentials] = React.useState();
   const [error, setError] = React.useState();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [passwordVisible, setPasswordVisible] = React.useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  }
 
   console.log(auth);
 
@@ -100,6 +105,7 @@ export function SignUp() {
           />
 
           <label htmlFor="password">Password</label>
+          <div className={style['password-input-container']}>
           <input
             onChange={handleCredentials}
             type="password"
@@ -108,7 +114,12 @@ export function SignUp() {
             placeholder="Password"
             required
           />
+          <button className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
+        {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+      </button>
+          </div>
           <label htmlFor="category">Confirm Password</label>
+          <div className={style['password-input-container']}>
           <input
             onChange={handleCredentials}
             type="password"
@@ -117,6 +128,10 @@ export function SignUp() {
             placeholder="Confirm Password"
             required
           />
+          <button className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
+        {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+      </button>
+          </div>
           <CustomButton
             onClick={handleSignUp}
             type="submit"

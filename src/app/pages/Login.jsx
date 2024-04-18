@@ -1,6 +1,5 @@
 import { toast } from "react-toastify";
 import FacebookIcon from "../../assets/icons/facebook-logo2.svg";
-import GoogleIcon from "../../assets/icons/google-icon.svg";
 import CustomButton from "../../components/CustomButton";
 import style from "../pages/css/Login.module.css";
 import { ConnectAudience } from "../../components/ConnectAudience/ConnectAudience";
@@ -10,11 +9,17 @@ import React from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { GoogleLogin } from "@react-oauth/google";
 import { Link } from "react-router-dom";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 export function Login() {
   const [userCredentials, setUserCredentials] = React.useState();
   const [error, setError] = React.useState();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [passwordVisible, setPasswordVisible] = React.useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
   console.log(auth);
 
@@ -56,7 +61,7 @@ export function Login() {
     <section className={style["login-section"]}>
       <div className={style["login-details"]}>
         <Logo />
-        <h2>Welcome back Zainab</h2>
+        <h2>Welcome back !!</h2>
         <div className={style["option-login-btn"]}>
           <CustomButton className={style["facebook-btn"]}>
             <img src={FacebookIcon} alt="" /> Facebook
@@ -88,14 +93,19 @@ export function Login() {
           />
 
           <label htmlFor="password">Password</label>
+          <div className={style['password-input-container']}>
           <input
             onChange={handleCredentials}
-            type="password"
+            type={passwordVisible ? 'text' : 'password'}
             id="password"
             name="password"
             placeholder="Password"
             required
           />
+          <button className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
+        {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+      </button>
+          </div>
           <CustomButton
             onClick={handleLogin}
             type="submit"

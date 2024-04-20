@@ -1,7 +1,5 @@
 .container{
-    height: 100vh;
     width: 100%;
-    /* background-color: red; */
     position: relative;
     justify-content: center;
     align-items: center;
@@ -9,12 +7,6 @@
   
 }
 
-/* .container img{
-    height: 500px;
-    width: 1408px;
-    flex-shrink: 0;
-    
-} */
 .container .contactImg{
     height: 500px;
     width: 100%;
@@ -23,10 +15,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
  .divider{
@@ -41,8 +29,6 @@
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);
-
-
 }
 
  .divider h3{
@@ -79,16 +65,15 @@
     border: none;
 }
 
+
 .wrapper{
     width: 80%;
     /* border: 1px solid black; */
-    /* background-color: yellow; */
     position: relative;
-    /* bottom: 32%; */
+    /* bottom:  -10%; */
     margin: 0 auto;
-    padding: 49px ;
+    padding: 0 49px 59px ;
     z-index: 1;
-    height: auto;
 }
 
 .wrapper .emailHeader{

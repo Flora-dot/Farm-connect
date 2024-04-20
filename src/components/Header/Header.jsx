@@ -6,18 +6,39 @@ import ArrowDownIcon from "../../assets/icons/arrow-down-icon.svg";
 import ShoppingBagIcon from "../../assets/icons/shopping-bag-icon.svg";
 import TruckIcon from "../../assets/icons/truck-icon.svg";
 import SearchIcon from "../../assets/icons/search-icon.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import style from "./Header.module.css";
 import { ReactComponent as MenuIcon } from "../../assets/icons/menu-icon.svg";
+import { auth } from "../../firebase/firebaseConfig";
 
 export default function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const user = auth.identifier
+
+  useEffect(() => {
+   
+    const checkSignIn = auth.onAuthStateChanged(user => {
+      if (user) {
+        // User is signed in
+        setIsLoggedIn(true);
+      } else {
+        // User is signed out
+        setIsLoggedIn(false);
+      }
+    });
+
+    // Clean up function
+    return () => {
+      checkSignIn(); 
+    };
+  }, []);
 
       // change menu state
-      const [showMenu, setMenu] = useState(false);
+      const [showMenu, setShowMenu] = useState(false);
 
       // toggle menu
       const toggleMenu = () => {
-        setMenu(!showMenu);
+        setShowMenu(!showMenu);
         console.log("Menu toggled:", !showMenu);
       };
 
@@ -41,24 +62,39 @@ export default function Header() {
             </div>
           </div>
           <div className={style.account}>
+           {isLoggedIn ? (
             <div className={style["dropdown-container"]}>
-              <button className={style["dropdown-btn"]}>
-                Account
-                <img src={ArrowDownIcon} alt="" />
-              </button>
-                <ul className={style["dropdown-menu"]}>
-                <li><Link className={style["dropdown-item"]} to="/SignUp">Create Account</Link></li>
-                <li><Link className={style["dropdown-item"]} to='/Login'>Login</Link></li>
-                <li><Link className={style["dropdown-item"]} to='/Userprofile'>Profile</Link></li>
-                </ul>
-            </div>
+            <button className={style["dropdown-btn"]}>
+              Welcome 
+              <img src={ArrowDownIcon} alt="" />
+            </button>
+              <ul className={style["dropdown-menu"]}>
+              <li><Link className={style["dropdown-item"]} to='/Userprofile'>Profile</Link></li>
+              <li><Link className={style["dropdown-item"]} to="/SignUp">Log out</Link></li>
+              <li><Link className={style["dropdown-item"]} to="/SignUp">My orders</Link></li>
+              </ul>
+          </div>
+             
+           ): (
+            <div className={style["dropdown-container"]}>
+             <button className={style["dropdown-btn"]}>
+               Account
+               <img src={ArrowDownIcon} alt="" />
+             </button>
+               <ul className={style["dropdown-menu"]}>
+               <li><Link className={style["dropdown-item"]} to="/SignUp">Create Account</Link></li>
+               <li><Link className={style["dropdown-item"]} to='/Login'>Login</Link></li>
+               <li><Link className={style["dropdown-item"]} to='/Userprofile'>Profile</Link></li>
+               </ul>
+           </div>
+           )}
             <img src={TruckIcon} alt="" />
             <img src={ShoppingBagIcon} alt="" />
             <MenuIcon className={style["menu-icon"]} onClick={toggleMenu} />
           </div>
         </div>       
         <div className={style.menu}>
-        <HeaderMenu className={showMenu ? 'mobile' : ''} />
+        <HeaderMenu className={`${style['header-menu']} ${showMenu ? style.mobile : ''}`} />
         </div>
       </div>
     </header>

@@ -27,7 +27,7 @@ export const Products = [
   
     {
       image: PastaSauce,
-      title: "Original Tomato Pasta Sauce",
+      title: "Tomato Pasta Sauce",
       description: "Healthy and organic",
       price: "N5000",
     },

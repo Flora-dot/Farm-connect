@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FarmerProfile } from './pages/FarmerProfile';
 import { LatestOffersPage } from './pages/LatestOffersPage';
 import { DealsOfTheDay } from './pages/DealsPage/DealsOfDay';
+import { PopularItems } from './pages/PopularItemsPage';
 
 const route = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const route = createBrowserRouter([
   {
     path: '/DealsPage',
     element: <DealsOfTheDay />
+  },
+  {
+    path: '/PopularItemsPage',
+    element: <PopularItems />
   },
   {
     path: '/Farmerprofile',

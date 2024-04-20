@@ -116,10 +116,12 @@
     }
     .products-display {
         grid-template-columns: 1fr 1fr;
+        row-gap: 80px;
     }
 
     .product-card {
         width: 170px;
+        height: 310px;
     }
 
     .product-image {

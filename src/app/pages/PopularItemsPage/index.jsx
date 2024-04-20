@@ -4,12 +4,12 @@ import FiveStarIcons from "../../../assets/icons/five-star-icon.svg";
 import Header from '../../../components/Header/Header';
 import { Footer } from '../../../components/Footer';
 
-export const DealsOfTheDay = () => {
+export const PopularItems = () => {
     return(
         <>
         <Header />
         <section className={style.offers}>
-        <h6>Deals of the Day</h6>
+        <h6>Popular Items</h6>
         <div className={style['products-display']}>
         {Products.map((product) => (
                 <div className={style["product-card"]}>

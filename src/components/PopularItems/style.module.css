@@ -20,7 +20,7 @@
 }
 
 .products-display {
-    padding: 0;
+    padding: 10px 0 50px;
     width: 100%;
     display: grid;
     justify-items: center;
@@ -108,7 +108,6 @@
         width: 210px;
     }
 }
-
 @media (max-width:540px) {
 
     .deals  {
@@ -116,10 +115,12 @@
     }
     .products-display {
         grid-template-columns: 1fr 1fr;
+        row-gap: 80px;
     }
 
     .product-card {
         width: 170px;
+        height: 310px;
     }
 
     .product-image {

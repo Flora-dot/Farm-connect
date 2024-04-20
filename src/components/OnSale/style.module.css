@@ -104,11 +104,13 @@
     }
     .products-display {
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        gap: 25px;
+        row-gap: 40px;
     }
 
     .product-card {
         width: 170px;
+        height: 350px;
     }
 
     .product-image {

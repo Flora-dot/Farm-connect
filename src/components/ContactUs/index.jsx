@@ -43,20 +43,22 @@ export const ContactUs = () => {
             <div className={styles.userImputfield}>
               <div>
                 <label htmlFor="name">Enter your name</label> <br />
-                <input type="text" placeholder="Enter your full name" /> <br />
+                <input type="text" id="name" placeholder="Enter your full name" /> <br />
                 <label htmlFor="email">Enter your email</label> <br />
-                <input type="email" placeholder="Enter your email" />
+                <input type="email" id="email" placeholder="Enter your email" />
               </div>
               <div>
                 <label htmlFor="number">Enter your Phone number</label> <br />
                 <input
                   type="number"
+                  id="number"
                   placeholder="Enter your Phone number"
                 />{" "}
                 <br />
                 <label htmlFor="category"> Choose a category </label> <br />
                 <input
                   type="category"
+                  id="category"
                   placeholder="Choose a category"
                   list="category"
                 />
@@ -72,7 +74,7 @@ export const ContactUs = () => {
               Write a message
             </label>{" "}
             <br />
-            <textarea name="message" id="" cols="133" rows="10">
+            <textarea name="message" id="message" cols="133" rows="10">
               Write us a message
             </textarea>{" "}
             <br />

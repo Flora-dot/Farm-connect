@@ -1,17 +1,26 @@
-import { Link } from "react-router-dom";
-// import { AboutUs } from "./AboutUs";
+// import { Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import { HeroSection } from "../../components/HeroSection/Hero";
+import { FarmConnectInfo } from "../../components/FarmConnectInfo";
+import { Deals } from "../../components/Deals";
+import { PopularItems } from "../../components/PopularItems";
+import { Reviews } from "../../components/Reviews";
+import { BecomeAgent } from "../../components/BecomeAgent";
+import { OnSale } from "../../components/OnSale";
+import { Footer } from "../../components/Footer";
 
 export default function Landing() {
     return(
-        <div>
-            This is the landing page
-            <Link to='/AboutUs'>About us</Link>
-            <Link to='*'>NotFound</Link>
-            <Link to='/ContactUs'>Contactus</Link>
-            <Link to='/Login'>Login</Link>
-            <Link to='/SignUp'>SignUp</Link>
-            <Link to='/FArmerProfile'>FarmerProfile</Link>
-            <Link to='/Productdetails'>Product details</Link>
-        </div>
+        <>
+           <Header />
+           <HeroSection />
+           <FarmConnectInfo />
+           <Deals />
+           <PopularItems />
+           <BecomeAgent />
+           <Reviews />
+           <OnSale />
+           <Footer />
+        </>
     );
 }

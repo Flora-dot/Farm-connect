@@ -1,5 +1,5 @@
 import style from "./style.module.css";
-import FarmerDisplayImage from "../../assets/images/farmer-portrait1.jpg";
+import FarmerDisplayImage from "../../assets/images/farmer-display-image.png";
 import FiveStarIcons from "../../assets/icons/five-star-icon.svg";
 import LocationIcon from "../../assets/icons/location-icon.svg";
 import VerifiedIcon from "../../assets/icons/user-check-icon.svg";

@@ -2,6 +2,7 @@
 
 :root {
   --color-black: #000;
+  --color-white:#fff;
   --primary-color-green: #265235;
   --accent-color: #F3C301;
   --light-color-green: #D4DCD7;
@@ -9,6 +10,8 @@
   --Neutral-Colors-Grey-600: #898E8A;
   --Neutral-Colors-Grey-200: #D4DCD7;
   --Neutral-Colors-Gray-800: #626963;
+  --Neutral-grey: #f5f5f5;
+  --app-padding: 0 100px;
 }
 * {
   box-sizing: border-box;
@@ -69,7 +72,8 @@ code {
   cursor: pointer;
 }
 
-.btn-bigTwo{
+.btn-bigTwo,
+.btn-bigo{
   display: flex;
   /* width: 493px; */
   width: 100%;
@@ -83,4 +87,9 @@ code {
   border-radius: 4px;
   background: #265235;
   border: none;
+}
+
+.btn-bigo {
+  background-color: var(--light-color-green);
+  color: var(--primary-color-green);
 }

@@ -4,7 +4,7 @@ import style from "./style.module.css";
 import PlantainImage from "../../assets/images/plantain-image.png";
 import VegetableOilImage from "../../assets/images/vegetable-oil.png";
 import CatfishImage from "../../assets/images/catfish-image.png";
-import RightArrowIcon from '../../assets/icons/arrow-icon.svg'
+import RightArrowIcon from '../../assets/icons/arrow-icon.svg';
 
 export const FarmerReviewsAndProducts = () => {
   return (

@@ -3,13 +3,15 @@ import FacebookIcon from "../../assets/icons/facebook-logo2.svg";
 import CustomButton from "../../components/CustomButton";
 import style from "../pages/css/Login.module.css";
 import { ConnectAudience } from "../../components/ConnectAudience/ConnectAudience";
-import { Logo } from "../../components/Logo";
+import { Logo } from "../../components/Logo/Logo";
 import { auth } from "../../firebase/firebaseConfig";
 import React from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { GoogleLogin } from "@react-oauth/google";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import Header from "../../components/Header/Header";
+import { Footer } from "../../components/Footer";
 
 export function Login() {
   const [userCredentials, setUserCredentials] = React.useState();
@@ -58,6 +60,8 @@ export function Login() {
   };
 
   return (
+    <>
+    <Header />
     <section className={style["login-section"]}>
       <div className={style["login-details"]}>
         <Logo />
@@ -130,5 +134,7 @@ export function Login() {
         <ConnectAudience className={style["connect-audience"]} />
       </div>
     </section>
+    <Footer />
+    </>
   );
 }

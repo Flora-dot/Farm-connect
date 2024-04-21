@@ -110,7 +110,7 @@ export function Login() {
             placeholder="Password"
             required
           />
-          <button className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
+          <button type="button" className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
         {passwordVisible ? <FaEyeSlash /> : <FaEye />}
       </button>
           </div>

@@ -59,7 +59,7 @@ export function SignUp() {
         const user = userCredential.user;
         console.log(user);
         toast("Account created successfully");
-        localStorage.setItem('user', userCredentials.user);
+        localStorage.setItem('user', userCredentials.name);
         setTimeout(() => {
           window.location.href = "/";
         }, 1000);
@@ -129,7 +129,7 @@ export function SignUp() {
             placeholder="Password"
             required
           />
-          <button className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
+          <button type="button" className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
         {passwordVisible ? <FaEyeSlash /> : <FaEye />}
       </button>
           </div>
@@ -143,7 +143,7 @@ export function SignUp() {
             placeholder="Confirm Password"
             required
           />
-          <button className={style["toggle-password-button"]} onClick={toggleConfirmPasswordVisibility}>
+          <button type="button" className={style["toggle-password-button"]} onClick={toggleConfirmPasswordVisibility}>
         {confirmPasswordVisible ? <FaEyeSlash /> : <FaEye />}
       </button>
           </div>

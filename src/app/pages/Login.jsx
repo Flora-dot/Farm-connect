@@ -24,10 +24,14 @@ export function Login() {
   };
 
   console.log(auth);
-
   const handleCredentials = (e) => {
-    setUserCredentials({ ...userCredentials, [e.target.name]: e.target.value });
+    setUserCredentials(prevState => {
+      const updatedState = { ...prevState, [e.target.name]: e.target.value };
+      console.log(updatedState);
+      return updatedState;
+    });
   };
+  
 
   // Manual sign in with firebase
   const handleLogin = (e) => {

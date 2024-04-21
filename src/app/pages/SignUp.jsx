@@ -32,16 +32,20 @@ export function SignUp() {
   console.log(auth);
 
   const handleCredentials = (e) => {
-    setUserCredentials({ ...userCredentials, [e.target.name]: e.target.value });
-    console.log(userCredentials);
+    setUserCredentials(prevState => {
+      const updatedState = { ...prevState, [e.target.name]: e.target.value };
+      console.log(updatedState);
+      return updatedState;
+    });
   };
+  
 
   const handleSignUp = (e) => {
     setIsSubmitting(true);
     e.preventDefault();
 
     // compare password and confirm password
-    if (userCredentials.password === userCredentials.confirmpassword) {
+    if (userCredentials.password !== userCredentials.confirmpassword) {
       toast("Passwords don't match");
       return setError("Passwords don't match");
     }

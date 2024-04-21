@@ -106,18 +106,17 @@
 .dropdown-menu {
     width: 100%;
     top: 30px;
-    display: none;
+    display: flex;
     flex-direction: column;
     position: absolute;
     background-color: #fff;
      border: 1px solid #ccc;
     list-style: none;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
-.dropdown-btn:hover + .dropdown-menu,
-.dropdown-menu:hover{
-    display: flex;
+.dropdown-menu li {
+    padding: 7px 0;
 }
 
 .dropdown-item {
@@ -126,11 +125,10 @@
     line-height: 22px;
     color: var(--color-black);
     text-decoration: none;
-    padding: 5px;
+    padding: 10px 5px;
 }
 
-.dropdown-item:hover {
-    display: block;
+.dropdown-menu li:hover {
     background-color: var(--light-color-green);
 }
 
@@ -146,7 +144,7 @@
     display: none;
 }
 
-.header-menu {
+.menu ul {
     list-style: none;
     display: flex;
     gap: 38px;
@@ -246,31 +244,49 @@ li .header-menu-content.active {
         order: -1;
     }
 
-    .menu {
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        top: 180px;
-        left: 0;
-        right: 0;
-        /* background-color: var(--color-black); */
-    }
-
     .menu-icon {
         display: block;
-        /* align-self: flex-end; */
     }
 
-    .header-menu {
+    .menu ul {
         display: none;
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-white);
+        text-align: center;
+        gap: 5px;
+        animation: fadeIn 1s linear;
+    }
+    
+    @keyframes fadeIn {
+        from{
+            opacity: 0.5;
+        }
+        to{
+            opacity: 1;
+        }
     }
 
-    .mobile{
+    li .header-menu-content {
+        border-bottom: 1px solid var(--primary-color-green);
+        font-weight: 500;
+    }
+
+    .menu ul li{
+        padding: 10px 0;
+    }
+
+    .menu ul li:hover {
+        background-color: var(--light-color-green);
+    }
+
+    .menu ul.mobile {
         display: flex;
         flex-direction: column;
-        /* position: absolute; */
         width: 100%;
     }
+    
 
     .search-wrapper .filter {
         display: none;

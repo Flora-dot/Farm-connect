@@ -2,13 +2,13 @@ import { NavLink } from "react-router-dom";
 
 import style from "./Header.module.css";
 
-export const HeaderMenu = () => {
+export const HeaderMenu = (props) => {
   return (
-    <ul className={style["header-menu"]}>
+    <ul className={props.className}>
       <li>
         <NavLink
           className={style["header-menu-content"]}
-          activeClassName={style["header-menu-content.active"]}
+          activeclassname={style["header-menu-content.active"]}
           exact
           to="/LatestOffers"
         >
@@ -18,7 +18,7 @@ export const HeaderMenu = () => {
       <li>
         <NavLink
           className={style["header-menu-content"]}
-          activeClassName={style["header-menu-content.active"]}
+          activeclassname={style["header-menu-content.active"]}
           exact
           to="/productcategory"
         >
@@ -28,7 +28,7 @@ export const HeaderMenu = () => {
       <li>
         <NavLink
           className={style["header-menu-content"]}
-          activeClassName={style["header-menu-content.active"]}
+          activeclassname={style["header-menu-content.active"]}
           exact
           to="/productcategory"
         >
@@ -38,7 +38,7 @@ export const HeaderMenu = () => {
       <li>
         <NavLink
           className={style["header-menu-content"]}
-          activeClassName={style["header-menu-content.active"]}
+          activeclassname={style["header-menu-content.active"]}
           exact
           to="/productcategory"
         >
@@ -48,7 +48,7 @@ export const HeaderMenu = () => {
       <li>
         <NavLink
           className={style["header-menu-content"]}
-          activeClassName={style["header-menu-content.active"]}
+          activeclassname={style["header-menu-content.active"]}
           exact
           to="/ContactUs"
         >
@@ -58,7 +58,7 @@ export const HeaderMenu = () => {
       <li>
         <NavLink
           className={style["header-menu-content"]}
-          activeClassName={style["header-menu-content.active"]}
+          activeclassname={style["header-menu-content.active"]}
           exact
           to="/AboutUs"
         >

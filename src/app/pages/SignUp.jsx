@@ -19,9 +19,14 @@ export function SignUp() {
   const [error, setError] = React.useState();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [passwordVisible, setPasswordVisible] = React.useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = React.useState(false);
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
+  }
+
+  const toggleConfirmPasswordVisibility = () => {
+    setConfirmPasswordVisible(!confirmPasswordVisible);
   }
 
   console.log(auth);
@@ -50,9 +55,11 @@ export function SignUp() {
         const user = userCredential.user;
         console.log(user);
         toast("Account created successfully");
+        localStorage.setItem('user', userCredentials.user);
         setTimeout(() => {
           window.location.href = "/";
         }, 1000);
+        
       })
       .catch((error) => {
         setError(error.message);
@@ -112,7 +119,7 @@ export function SignUp() {
           <div className={style['password-input-container']}>
           <input
             onChange={handleCredentials}
-            type="password"
+            type={passwordVisible ? 'text' : 'password'}
             id="password"
             name="password"
             placeholder="Password"
@@ -126,14 +133,14 @@ export function SignUp() {
           <div className={style['password-input-container']}>
           <input
             onChange={handleCredentials}
-            type="password"
+            type={confirmPasswordVisible ? 'text' : 'password'}
             id="confirm-password"
             name="confirmpassword"
             placeholder="Confirm Password"
             required
           />
-          <button className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
-        {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+          <button className={style["toggle-password-button"]} onClick={toggleConfirmPasswordVisibility}>
+        {confirmPasswordVisible ? <FaEyeSlash /> : <FaEye />}
       </button>
           </div>
           <CustomButton

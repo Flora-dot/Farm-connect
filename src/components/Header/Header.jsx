@@ -13,11 +13,10 @@ import { auth } from "../../firebase/firebaseConfig";
 
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const user = auth.identifier
+  const user = localStorage.getItem("user");
 
   useEffect(() => {
-   
-    const checkSignIn = auth.onAuthStateChanged(user => {
+    const checkSignIn = auth.onAuthStateChanged((user) => {
       if (user) {
         // User is signed in
         setIsLoggedIn(true);
@@ -27,20 +26,18 @@ export default function Header() {
       }
     });
 
-    // Clean up function
     return () => {
-      checkSignIn(); 
+      checkSignIn();
     };
   }, []);
 
-      // change menu state
-      const [showMenu, setShowMenu] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-      // toggle menu
-      const toggleMenu = () => {
-        setShowMenu(!showMenu);
-        console.log("Menu toggled:", !showMenu);
-      };
+  const toggleDropDown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <header className={style.header}>
@@ -50,51 +47,99 @@ export default function Header() {
           FARM CONNECT
         </Link>
       </div>
-      <div className={style['header-navigation']}>
-        <div className={style['header-details']}>
-          <div className={style['search-wrapper']}>
-            <div className={style['search']}>
+      <div className={style["header-navigation"]}>
+        <div className={style["header-details"]}>
+          <div className={style["search-wrapper"]}>
+            <div className={style["search"]}>
               <img src={SearchIcon} alt="" />
-              <input type="search" id="search" placeholder="What are you looking for?" />
+              <input
+                type="search"
+                id="search"
+                placeholder="What are you looking for?"
+              />
             </div>
             <div className={style.filter}>
               <img src={FilterIcon} alt="" />
             </div>
           </div>
           <div className={style.account}>
-           {isLoggedIn ? (
-            <div className={style["dropdown-container"]}>
-            <button className={style["dropdown-btn"]}>
-              Welcome 
-              <img src={ArrowDownIcon} alt="" />
-            </button>
-              <ul className={style["dropdown-menu"]}>
-              <li><Link className={style["dropdown-item"]} to='/Userprofile'>Profile</Link></li>
-              <li><Link className={style["dropdown-item"]} to="/SignUp">Log out</Link></li>
-              <li><Link className={style["dropdown-item"]} to="/SignUp">My orders</Link></li>
-              </ul>
-          </div>
-             
-           ): (
-            <div className={style["dropdown-container"]}>
-             <button className={style["dropdown-btn"]}>
-               Account
-               <img src={ArrowDownIcon} alt="" />
-             </button>
-               <ul className={style["dropdown-menu"]}>
-               <li><Link className={style["dropdown-item"]} to="/SignUp">Create Account</Link></li>
-               <li><Link className={style["dropdown-item"]} to='/Login'>Login</Link></li>
-               <li><Link className={style["dropdown-item"]} to='/Userprofile'>Profile</Link></li>
-               </ul>
-           </div>
-           )}
+            {isLoggedIn ? (
+              <div className={style["dropdown-container"]}>
+                <button
+                  className={style["dropdown-btn"]}
+                  onClick={toggleDropDown}
+                >
+                  {` Welcome ${user.email}`}
+                  <img src={ArrowDownIcon} alt="" />
+                </button>
+                {isOpen && (
+                  <ul className={style["dropdown-menu"]}>
+                    <li>
+                      <Link
+                        className={style["dropdown-item"]}
+                        to="/Userprofile"
+                      >
+                        Profile
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className={style["dropdown-item"]} to="/SignUp">
+                        My orders
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className={style["dropdown-item"]} to="/SignUp">
+                        Log out
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </div>
+            ) : (
+              <div className={style["dropdown-container"]}>
+                <button
+                  className={style["dropdown-btn"]}
+                  onClick={toggleDropDown}
+                >
+                  Account
+                  <img src={ArrowDownIcon} alt="" />
+                </button>
+                {isOpen && (
+                  <ul className={style["dropdown-menu"]}>
+                    <li>
+                      <Link className={style["dropdown-item"]} to="/SignUp">
+                        Create Account
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className={style["dropdown-item"]} to="/Login">
+                        Login
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className={style["dropdown-item"]}
+                        to="/Userprofile"
+                      >
+                        Profile
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </div>
+            )}
             <img src={TruckIcon} alt="" />
             <img src={ShoppingBagIcon} alt="" />
-            <MenuIcon className={style["menu-icon"]} onClick={toggleMenu} />
+            <MenuIcon
+              className={style["menu-icon"]}
+              onClick={() => {
+                setOpenMenu(!openMenu);
+              }}
+            />
           </div>
-        </div>       
+        </div>
         <div className={style.menu}>
-        <HeaderMenu className={`${style['header-menu']} ${showMenu ? style.mobile : ''}`} />
+          <HeaderMenu className={openMenu ? style.mobile : style['header-menu']} />
         </div>
       </div>
     </header>

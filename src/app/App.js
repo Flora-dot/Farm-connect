@@ -10,6 +10,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FarmerProfile } from './pages/FarmerProfile';
+import { EmptyCart } from './pages/EmptyCart';
 
 const route = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const route = createBrowserRouter([
   {
     path: '/ProductDetail',
     element:  <ProductDetails />
+  },
+  {
+    path: '/EmptyCart',
+    element:  <EmptyCart />
   },
   {
     path: '*',

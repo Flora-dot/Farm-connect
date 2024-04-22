@@ -129,7 +129,7 @@ export default function Header() {
               </div>
             )}
             <img src={TruckIcon} alt="" />
-            <img src={ShoppingBagIcon} alt="" />
+            <Link to='/EmptyCart'><img src={ShoppingBagIcon} alt="" /></Link>
             <MenuIcon
               className={style["menu-icon"]}
               onClick={() => {

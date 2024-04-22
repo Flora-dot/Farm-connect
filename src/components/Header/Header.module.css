@@ -92,7 +92,8 @@
     position: relative;
 }
 
-.dropdown-btn {
+.dropdown-btn,
+.dropdown-btn-loggedin {
     background-color: transparent;
     display: flex;
     gap: 5px;
@@ -101,6 +102,12 @@
     border-radius: 4px;
     color: #000;
     border: 1px solid var(--Brand-Colors-Main, #265235);
+}
+
+.dropdown-btn-loggedin {
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
 }
 
 .dropdown-menu {

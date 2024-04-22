@@ -6,7 +6,7 @@ import { ConnectAudience } from "../../components/ConnectAudience/ConnectAudienc
 import { Logo } from "../../components/Logo/Logo";
 import { auth} from "../../firebase/firebaseConfig";
 import React from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { GoogleLogin } from "@react-oauth/google";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -52,14 +52,16 @@ export function SignUp() {
     createUserWithEmailAndPassword(
       auth,
       userCredentials.email,
-      userCredentials.password
+      userCredentials.password,
+      userCredentials.fullname
     )
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
+        const { fullname } = userCredentials; // Destructure name from userCredentials
+        updateProfile(user, { displayName: fullname });
         console.log(user);
         toast("Account created successfully");
-        // localStorage.setItem('user', userCredentials.name);
         setTimeout(() => {
           window.location.href = "/";
         }, 1000);

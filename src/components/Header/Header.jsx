@@ -13,7 +13,7 @@ import { auth } from "../../firebase/firebaseConfig";
 
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const user = localStorage.getItem("user");
+
 
   useEffect(() => {
     const checkSignIn = auth.onAuthStateChanged((user) => {
@@ -66,10 +66,10 @@ export default function Header() {
             {isLoggedIn ? (
               <div className={style["dropdown-container"]}>
                 <button
-                  className={style["dropdown-btn"]}
+                  className={style["dropdown-btn-loggedin"]}
                   onClick={toggleDropDown}
                 >
-                  {` Welcome ${user.email}`}
+                   Hi {auth.currentUser?.displayName}
                   <img src={ArrowDownIcon} alt="" />
                 </button>
                 {isOpen && (
@@ -139,7 +139,7 @@ export default function Header() {
           </div>
         </div>
         <div className={style.menu}>
-          <HeaderMenu className={openMenu ? style.mobile : style['header-menu']} />
+          <HeaderMenu className={openMenu ? style.mobile : ''} />
         </div>
       </div>
     </header>

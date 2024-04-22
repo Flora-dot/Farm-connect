@@ -72,13 +72,13 @@ section.hero {
 }
 
 .hero-image .spice {
-    width: 688px;
+    width: 630px;
     height: 493px;    
 }
 
 .hero-image .eclipse {
-    width: 175px;
-    height: 175px;
+    width: 140px;
+    height: 140px;
     position: absolute;
     left: -95px;
 }
@@ -90,7 +90,7 @@ section.hero {
         padding: 40px 70px;
     }
     .hero-image .spice {
-        width: 480px;
+        width: 450px;
         height: 485px;
     }
 

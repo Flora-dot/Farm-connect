@@ -74,7 +74,7 @@ form label {
     color: var(--Neutral-Colors-Grey-600);
 }
 
-input{
+.login-details input{
     width: 100%;
     height: 48px;
     padding: 10px;
@@ -103,20 +103,18 @@ input{
 
 }
 
-
-
-input::placeholder {
+.login-details input::placeholder {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
 }
   
-  .toggle-password-button {
+.toggle-password-button {
     background: none;
     border: none;
     cursor: pointer;
-  }
+}
 
 .login-btn,
 .signup-btn {

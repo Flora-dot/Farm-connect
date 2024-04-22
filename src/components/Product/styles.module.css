@@ -1,7 +1,7 @@
 .container{
     width: 100%;
     /* background-color: red; */
-    height: 1370px;
+    /* height: 1370px; */
     flex-shrink: 0;
     padding-left: 4%;
     padding-right: 2%;
@@ -268,8 +268,6 @@
     /* padding: 5rem; */
     justify-content: center;
     align-items: center;
-   
-
 }
 
 .footheader{
@@ -281,8 +279,13 @@
     text-align: center;
     margin-top: 10%;
     margin-bottom: 5%;
-
 }
+
+button .farmer {
+    width: 100%;
+    background-color: var(--light-color-green);
+}
+
 
 @media (max-width: 600px) {
     .container{

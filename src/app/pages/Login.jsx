@@ -3,13 +3,15 @@ import FacebookIcon from "../../assets/icons/facebook-logo2.svg";
 import CustomButton from "../../components/CustomButton";
 import style from "../pages/css/Login.module.css";
 import { ConnectAudience } from "../../components/ConnectAudience/ConnectAudience";
-import { Logo } from "../../components/Logo";
+import { Logo } from "../../components/Logo/Logo";
 import { auth } from "../../firebase/firebaseConfig";
 import React from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { GoogleLogin } from "@react-oauth/google";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import Header from "../../components/Header/Header";
+import { Footer } from "../../components/Footer";
 
 export function Login() {
   const [userCredentials, setUserCredentials] = React.useState();
@@ -22,10 +24,14 @@ export function Login() {
   };
 
   console.log(auth);
-
   const handleCredentials = (e) => {
-    setUserCredentials({ ...userCredentials, [e.target.name]: e.target.value });
+    setUserCredentials(prevState => {
+      const updatedState = { ...prevState, [e.target.name]: e.target.value };
+      console.log(updatedState);
+      return updatedState;
+    });
   };
+  
 
   // Manual sign in with firebase
   const handleLogin = (e) => {
@@ -45,7 +51,7 @@ export function Login() {
         setTimeout(() => {
           window.location.href = "/";
         }, 1000);
-        // localStorage.setItem('user', )
+        localStorage.setItem('user');
         // ...
       })
       .catch((error) => {
@@ -58,6 +64,8 @@ export function Login() {
   };
 
   return (
+    <>
+    <Header />
     <section className={style["login-section"]}>
       <div className={style["login-details"]}>
         <Logo />
@@ -102,7 +110,7 @@ export function Login() {
             placeholder="Password"
             required
           />
-          <button className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
+          <button type="button" className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
         {passwordVisible ? <FaEyeSlash /> : <FaEye />}
       </button>
           </div>
@@ -130,5 +138,7 @@ export function Login() {
         <ConnectAudience className={style["connect-audience"]} />
       </div>
     </section>
+    <Footer />
+    </>
   );
 }

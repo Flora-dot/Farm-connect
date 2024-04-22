@@ -9,6 +9,7 @@ import '../../index.css'
 import { useState } from 'react'
 import { Reviews } from './Reviews'
 import { Card } from './Card'
+import { Link } from 'react-router-dom'
 
 export const ProductDetail = () => {
     const [count, setCount] = useState(0)
@@ -61,9 +62,7 @@ export const ProductDetail = () => {
                         <Reviews/>
                         <Reviews/>
                         <Reviews/>
-                        <p className={styles.moreReview}><CustomBtn theme="middle"><small>Check Famer's Profile</small></CustomBtn></p>
-                        
-
+                        <Link to='/farmerprofile'><CustomBtn  theme="bigo" className={styles.farmer}>View more from Farmer</CustomBtn></Link>
                     </div>
                 </div>
             </div>

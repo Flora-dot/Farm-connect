@@ -3,13 +3,15 @@ import FacebookIcon from "../../assets/icons/facebook-logo2.svg";
 import CustomButton from "../../components/CustomButton";
 import style from "../pages/css/Login.module.css";
 import { ConnectAudience } from "../../components/ConnectAudience/ConnectAudience";
-import { Logo } from "../../components/Logo";
+import { Logo } from "../../components/Logo/Logo";
 import { auth} from "../../firebase/firebaseConfig";
 import React from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { GoogleLogin } from "@react-oauth/google";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import Header from "../../components/Header/Header";
+import { Footer } from "../../components/Footer";
 
 export function SignUp() {
   // Managae manual sign up
@@ -17,40 +19,53 @@ export function SignUp() {
   const [error, setError] = React.useState();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [passwordVisible, setPasswordVisible] = React.useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = React.useState(false);
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   }
 
+  const toggleConfirmPasswordVisibility = () => {
+    setConfirmPasswordVisible(!confirmPasswordVisible);
+  }
+
   console.log(auth);
 
   const handleCredentials = (e) => {
-    setUserCredentials({ ...userCredentials, [e.target.name]: e.target.value });
-    console.log(userCredentials);
+    setUserCredentials(prevState => {
+      const updatedState = { ...prevState, [e.target.name]: e.target.value };
+      console.log(updatedState);
+      return updatedState;
+    });
   };
+  
 
   const handleSignUp = (e) => {
     setIsSubmitting(true);
     e.preventDefault();
 
     // compare password and confirm password
-    if (userCredentials.password === userCredentials.confirmpassword) {
+    if (userCredentials.password !== userCredentials.confirmpassword) {
       toast("Passwords don't match");
       return setError("Passwords don't match");
     }
     createUserWithEmailAndPassword(
       auth,
       userCredentials.email,
-      userCredentials.password
+      userCredentials.password,
+      userCredentials.fullname
     )
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
+        const { fullname } = userCredentials; // Destructure name from userCredentials
+        updateProfile(user, { displayName: fullname });
         console.log(user);
         toast("Account created successfully");
         setTimeout(() => {
           window.location.href = "/";
         }, 1000);
+        
       })
       .catch((error) => {
         setError(error.message);
@@ -62,6 +77,8 @@ export function SignUp() {
   };
 
   return (
+    <>
+    <Header />
     <section className={style["login-section"]}>
       <div className={style["login-details"]}>
         <Logo />
@@ -108,13 +125,13 @@ export function SignUp() {
           <div className={style['password-input-container']}>
           <input
             onChange={handleCredentials}
-            type="password"
+            type={passwordVisible ? 'text' : 'password'}
             id="password"
             name="password"
             placeholder="Password"
             required
           />
-          <button className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
+          <button type="button" className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
         {passwordVisible ? <FaEyeSlash /> : <FaEye />}
       </button>
           </div>
@@ -122,14 +139,14 @@ export function SignUp() {
           <div className={style['password-input-container']}>
           <input
             onChange={handleCredentials}
-            type="password"
+            type={confirmPasswordVisible ? 'text' : 'password'}
             id="confirm-password"
             name="confirmpassword"
             placeholder="Confirm Password"
             required
           />
-          <button className={style["toggle-password-button"]} onClick={togglePasswordVisibility}>
-        {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+          <button type="button" className={style["toggle-password-button"]} onClick={toggleConfirmPasswordVisibility}>
+        {confirmPasswordVisible ? <FaEyeSlash /> : <FaEye />}
       </button>
           </div>
           <CustomButton
@@ -154,5 +171,7 @@ export function SignUp() {
         ></ConnectAudience>
       </div>
     </section>
+    <Footer />
+    </>
   );
 }

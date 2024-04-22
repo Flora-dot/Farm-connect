@@ -113,6 +113,7 @@
      border: 1px solid #ccc;
     list-style: none;
     padding: 5px 0;
+    z-index: 1;
 }
 
 .dropdown-menu li {
@@ -187,7 +188,7 @@ li .header-menu-content.active {
         gap: 25px;
     }
 
-    .header-menu {
+    .menu ul {
         gap: 20px;
     }
 
@@ -208,7 +209,7 @@ li .header-menu-content.active {
         gap: 20px;
     }
 
-    .header-menu {
+    .menu ul {
         gap: 15px;
     }
 }
@@ -219,7 +220,7 @@ li .header-menu-content.active {
         gap: 15px;
     }
 
-    .header-menu {
+    .menu ul {
         gap: 13px;
     }
 

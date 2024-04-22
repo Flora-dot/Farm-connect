@@ -59,7 +59,7 @@ export function SignUp() {
         const user = userCredential.user;
         console.log(user);
         toast("Account created successfully");
-        localStorage.setItem('user', userCredentials.name);
+        // localStorage.setItem('user', userCredentials.name);
         setTimeout(() => {
           window.location.href = "/";
         }, 1000);

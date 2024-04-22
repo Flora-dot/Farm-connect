@@ -63,6 +63,7 @@ section.hero {
     font-weight: 600;
     line-height: 22px;
     cursor: pointer;
+    border: none ;
 }
 
 .hero-image {

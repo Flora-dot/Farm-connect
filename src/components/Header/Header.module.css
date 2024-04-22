@@ -145,7 +145,7 @@
 }
 
 .menu-icon{
-    width: 40px;
+    width: 35px;
     height: 40px;
     cursor: pointer;
     justify-self: flex-end;
@@ -240,6 +240,15 @@ li .header-menu-content.active {
     .header {
         padding: 10px 20px ;
         align-items: flex-start;
+        gap: 10 px;
+    }
+
+    .header .logo {
+        align-self: flex-end;
+    }
+
+    .header .logo-text{
+        font-size: 13px;
     }
 
     .header-details{
@@ -248,8 +257,15 @@ li .header-menu-content.active {
         align-items: flex-start;
     }
 
+    .header .search {
+        width: 250px;
+        height: 30px;
+    }
+
     .header .account {
+        /* flex-direction: column; */
         order: -1;
+        gap: 15px;
     }
 
     .menu-icon {

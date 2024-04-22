@@ -31,8 +31,8 @@
 
 .product-card {
     width: 300px;
-    height: 490px;
-    box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    /* height: 490px; */
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.05);
 }
 
 .product-image {
@@ -90,7 +90,7 @@
 
 /* Media queries  */
 
-@media (max-width:1024px) {
+@media (max-width:1240px) {
     .product-card {
         width: 200px;
     }
@@ -116,7 +116,7 @@
     }
     .products-display {
         grid-template-columns: 1fr 1fr;
-        row-gap: 80px;
+        row-gap: 120px;
     }
 
     .product-card {

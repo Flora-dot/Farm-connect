@@ -52,13 +52,13 @@ export function SignUp() {
     createUserWithEmailAndPassword(
       auth,
       userCredentials.email,
-      userCredentials.password
+      userCredentials.password,
     )
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
         const { fullname } = userCredentials; // Destructure name from userCredentials
-        updateProfile(user, { displayName: fullname });
+       updateProfile(user, { displayName: fullname });
         console.log(user);
         toast("Account created successfully");
         setTimeout(() => {

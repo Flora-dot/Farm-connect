@@ -52,8 +52,7 @@ export function SignUp() {
     createUserWithEmailAndPassword(
       auth,
       userCredentials.email,
-      userCredentials.password,
-      userCredentials.fullname
+      userCredentials.password
     )
       .then((userCredential) => {
         // Signed up

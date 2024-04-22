@@ -10,11 +10,14 @@ import { useState, useEffect } from "react";
 import style from "./Header.module.css";
 import { ReactComponent as MenuIcon } from "../../assets/icons/menu-icon.svg";
 import { auth } from "../../firebase/firebaseConfig";
+import { signOut } from "firebase/auth";
+import { toast } from "react-toastify";
 
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [logUserOut, setLogUserOut] = useState(false);
 
-
+  // check if user is logged in
   useEffect(() => {
     const checkSignIn = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -30,6 +33,18 @@ export default function Header() {
       checkSignIn();
     };
   }, []);
+
+  // sign out user
+  const logOut = () => {
+    setLogUserOut(true);
+    signOut(auth)
+      .then(() => {
+        toast("Successfully logged out");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -69,7 +84,7 @@ export default function Header() {
                   className={style["dropdown-btn-loggedin"]}
                   onClick={toggleDropDown}
                 >
-                   Hi {auth.currentUser?.displayName}
+                  Hi {auth.currentUser?.displayName}
                   <img src={ArrowDownIcon} alt="" />
                 </button>
                 {isOpen && (
@@ -83,14 +98,12 @@ export default function Header() {
                       </Link>
                     </li>
                     <li>
-                      <Link className={style["dropdown-item"]} to="/SignUp">
+                      <Link className={style["dropdown-item"]} to="/EmptyCart">
                         My orders
                       </Link>
                     </li>
-                    <li>
-                      <Link className={style["dropdown-item"]} to="/SignUp">
-                        Log out
-                      </Link>
+                    <li onClick={logOut}>
+                      <Link className={style["dropdown-item"]}>Log out</Link>
                     </li>
                   </ul>
                 )}
@@ -129,7 +142,9 @@ export default function Header() {
               </div>
             )}
             <img src={TruckIcon} alt="" />
-            <Link to='/EmptyCart'><img src={ShoppingBagIcon} alt="" /></Link>
+            <Link to="/EmptyCart">
+              <img src={ShoppingBagIcon} alt="" />
+            </Link>
             <MenuIcon
               className={style["menu-icon"]}
               onClick={() => {
@@ -139,7 +154,7 @@ export default function Header() {
           </div>
         </div>
         <div className={style.menu}>
-          <HeaderMenu className={openMenu ? style.mobile : ''} />
+          <HeaderMenu className={openMenu ? style.mobile : ""} />
         </div>
       </div>
     </header>

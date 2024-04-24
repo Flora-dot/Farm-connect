@@ -205,6 +205,8 @@ footer .black h6{
 
     footer .black {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
     }
 }

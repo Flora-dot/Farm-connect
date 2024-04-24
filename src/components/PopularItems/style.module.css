@@ -89,6 +89,11 @@
 
 
 /* Media queries  */
+@media (max-width:1344px) {
+    .product-card {
+        width: 250px;
+    }
+}
 
 @media (max-width:1240px) {
     .product-card {
@@ -125,5 +130,17 @@
 
     .product-image {
         height: 200px;
+    }
+}
+
+@media (max-width:380px) {
+    .products-display {
+        grid-template-columns: 1fr;
+        row-gap: 70px;
+    }
+
+    .product-card {
+        width: 250px;
+        height: 310px;
     }
 }

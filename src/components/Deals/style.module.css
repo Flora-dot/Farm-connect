@@ -33,6 +33,7 @@
     width: 300px;
     /* height: 490px; */
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
 }
 
 .product-image {
@@ -89,6 +90,11 @@
 
 
 /* Media queries  */
+@media (max-width:1344px) {
+    .product-card {
+        width: 250px;
+    }
+}
 
 @media (max-width:1240px) {
     .product-card {
@@ -126,5 +132,17 @@
 
     .product-image {
         height: 200px;
+    }
+}
+
+@media (max-width:380px) {
+    .products-display {
+        grid-template-columns: 1fr;
+        row-gap: 70px;
+    }
+
+    .product-card {
+        width: 200px;
+        height: 310px;
     }
 }

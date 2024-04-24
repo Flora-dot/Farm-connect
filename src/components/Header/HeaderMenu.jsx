@@ -20,7 +20,7 @@ export const HeaderMenu = (props) => {
           className={style["header-menu-content"]}
           activeclassname={style["header-menu-content.active"]}
           exact
-          to="/productcategory"
+          to="/ProductCategory/Crops"
         >
           Crops
         </NavLink>
@@ -30,7 +30,7 @@ export const HeaderMenu = (props) => {
           className={style["header-menu-content"]}
           activeclassname={style["header-menu-content.active"]}
           exact
-          to="/productcategory"
+          to="/ProductCategory/Livestock"
         >
           Livestock
         </NavLink>
@@ -40,7 +40,7 @@ export const HeaderMenu = (props) => {
           className={style["header-menu-content"]}
           activeclassname={style["header-menu-content.active"]}
           exact
-          to="/productcategory"
+          to="/ProductCategory/FruitsandVeggies"
         >
           Fruits and Veggies
         </NavLink>

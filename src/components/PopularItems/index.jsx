@@ -23,7 +23,7 @@ export const PopularItems = () => {
               <div className={style["card-details"]}>
                 <h1>{product.title}</h1>
                 <h2>{product.description}</h2>
-                <p>{product.price}</p>
+                <p>&#8358;{product.price}</p>
                 <div className={style["star-reviews"]}>
                   <img src={FiveStarIcons} alt="" />
                   <span>(201) Reviews</span>

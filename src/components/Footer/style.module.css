@@ -46,6 +46,7 @@ footer {
     padding: 10px;
     border-radius: 6px;
     color: var(--color-white);
+    border: none;
 }
 
 .footer-navigation {

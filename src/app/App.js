@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { FarmerProfile } from "./pages/FarmerProfile";
 import { LatestOffersPage } from "./pages/LatestOffersPage";
 import { DealsOfTheDay } from "./pages/DealsPage/DealsOfDay";
-import { PopularItems } from "../components/PopularItems";
+import { PopularItems } from "./pages/PopularItemsPage/";
 import { EmptyCart } from "./pages/EmptyCart";
 import { ProductCategoryPage } from "./pages/ProductCategoryPage";
 

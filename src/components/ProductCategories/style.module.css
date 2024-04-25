@@ -2,12 +2,12 @@
     margin: 50px 0 100px;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    gap: 30px;
+    gap: 20px;
 }
 
 .sidebar {
     padding: 30px 20px;
-    height: 500px;
+    height: 300px;
     box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -52,28 +52,6 @@
     background-color: var( --light-color-green);
 }
 
-.price-filter-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 5px;
-}
-
-.price-filter-wrapper input {
-    width: 25px;
-    height: 25px;
-}
-
-.price-filter-wrapper input:checked {
-    accent-color: var(--light-color-green);
-} 
-
-.price-filter-wrapper label{
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 22px;
-}
 
 .products-listing {
     width: 100%;
@@ -178,7 +156,7 @@
     }
     .sidebar{
         /* display: none; */
-        height: 400px;
+        height: 180px;
     }
     .products-listing {
         grid-template-columns: 1fr 1fr;

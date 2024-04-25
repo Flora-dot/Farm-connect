@@ -50,7 +50,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-1',
         name: 'Yam',
-        price: '10000 Naira',
+        price: '10000',
         description: '5 tubers of Yam',
         image: YamImage,
         category: 'Crops',
@@ -59,7 +59,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-2',
         name: 'Yam',
-        price: '8000 Naira',
+        price: '8000',
         description: '5 tubers of Yam',
         image: YamImageTwo,
         category: 'Crops',
@@ -68,7 +68,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-3',
         name: 'Sweet Potato',
-        price: '1000 Naira',
+        price: '1000',
         description: '10 tubers of sweet potato',
         image: SweetPotatoImage,
         category: 'Crops',
@@ -77,7 +77,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-4',
         name: 'Irish Potato',
-        price: '2000 Naira',
+        price: '2000',
         description: '10 tubers of irish potato',
         image: IrishPotatoImage,
         category: 'Crops',
@@ -86,7 +86,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-5',
         name: 'Cassava',
-        price: '3000 Naira',
+        price: '3000',
         description: '10 tubers of cassava',
         image: CassavaImage,
         category: 'Crops',
@@ -95,7 +95,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-21',
         name: 'Rice',
-        price: '50000 Naira',
+        price: '50000',
         description: 'A bag of rice',
         image: RiceBagImage,
         category: 'Crops',
@@ -104,7 +104,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-23',
         name: 'Corn Kernels',
-        price: '3500 Naira',
+        price: '3500',
         description: '1kg of corn kernels',
         image: CornKernelImage,
         category: 'Crops',
@@ -113,7 +113,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-24',
         name: 'Beans',
-        price: '5000 Naira',
+        price: '5000',
         description: '1kg of beans',
         image: BeansImage,
         category: 'Crops',
@@ -122,7 +122,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-25',
         name: 'Rice',
-        price: '10000 Naira',
+        price: '10000',
         description: 'Small bag of rice',
         image: RiceImage,
         category: 'Crops',
@@ -131,7 +131,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-41',
         name: 'Orange',
-        price: '10000 Naira',
+        price: '10000',
         description: '50 pieces of orange',
         image: OrangeImage,
         category: 'Fruits and Veggies',
@@ -140,7 +140,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-42',
         name: 'Strawberries',
-        price: '7000 Naira',
+        price: '7000',
         description: '1kg of strawberries',
         image: StrawberryImage,
         category: 'Fruits and Veggies',
@@ -149,7 +149,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-43',
         name: 'Mango',
-        price: '10000 Naira',
+        price: '10000',
         description: '50 pieces of mango',
         image: MangoImage,
         category: 'Fruits and Veggies',
@@ -158,7 +158,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-44',
         name: 'Cherries',
-        price: '5000 Naira',
+        price: '5000',
         description: '1kg of cherries',
         image:CherriesImage,
         category: 'Fruits and Veggies',
@@ -167,7 +167,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-45',
         name: 'Pear',
-        price: '8000 Naira',
+        price: '8000',
         description: '50 pieces ofPear',
         image: PearImage,
         category: 'Fruits and Veggies',
@@ -176,7 +176,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-46',
         name: 'Lime',
-        price: '15000 Naira',
+        price: '15000',
         description: '50 pieces of Lime',
         image: LimeImage,
         category: 'Fruits and Veggies',
@@ -185,7 +185,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-47',
         name: 'Pineapple',
-        price: '10000 Naira',
+        price: '10000',
         description: '20 pieces of Pineapple',
         image: PineappleImage,
         category: 'Fruits and Veggies',
@@ -194,7 +194,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-61',
         name: 'Broccoli',
-        price: '4000 Naira',
+        price: '4000',
         description: '1kg of Broccoli',
         image: BroccoliImage,
         category: 'Fruits and Veggies',
@@ -203,7 +203,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-62',
         name: 'Cucumber',
-        price: '15000 Naira',
+        price: '15000',
         description: '30 pieces of cucumber',
         image: CucumberImage,
         category: 'Fruits and Veggies',
@@ -212,7 +212,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-63',
         name: 'Spring Onions',
-        price: '2000 Naira',
+        price: '2000',
         description: '1kg of spriong onions',
         image: SpringOnionsImage,
         category: 'Fruits and Veggies',
@@ -221,7 +221,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-64',
         name: 'Onions',
-        price: '5000 Naira',
+        price: '5000',
         description: '1kg of Onions',
         image: OnionImage,
         category: 'Fruits and Veggies',
@@ -230,7 +230,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-65',
         name: 'Plantain',
-        price: '16000 Naira',
+        price: '16000',
         description: '5 bunches of plantain',
         image: PlantainImage,
         category: 'Fruits and Veggies',
@@ -239,7 +239,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-66',
         name: 'Eggs',
-        price: '60000 Naira',
+        price: '60000',
         description: '10 crates of egg',
         image: EggImage,
         category: 'Fruits and Veggies',
@@ -248,7 +248,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-67',
         name: 'Tomato',
-        price: '40000 Naira',
+        price: '40000',
         description: '1 basket of tomatoes',
         image: TomatoImage,
         category: 'Fruits and Veggies',
@@ -257,7 +257,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-68',
         name: 'Green peppers',
-        price: '3000 Naira',
+        price: '3000',
         description: '1kg of green peppers',
         image: GreenPeppers,
         category: 'Fruits and Veggies',
@@ -266,7 +266,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-69',
         name: 'Egg Plant',
-        price: '7000 Naira',
+        price: '7000',
         description: '1kg of Egg plant',
         image: EggPlantImage,
         category: 'Fruits and Veggies',
@@ -275,7 +275,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-70',
         name: 'Carrot',
-        price: '8500 Naira',
+        price: '8500',
         description: '1kg of Carrots',
         image: CarrotImage,
         category: 'Fruits and Veggies',
@@ -284,7 +284,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-71',
         name: 'Palm kernel',
-        price: '20000 Naira',
+        price: '20000',
         description: '2kg palm kernelr',
         image: PalmKernelImage,
         category: 'Fruits and Veggies',
@@ -293,7 +293,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-81',
         name: 'Catfish',
-        price: '45000 Naira',
+        price: '45000',
         description: '10kg of Catfish',
         image: CatfishImage,
         category: 'Livestock',
@@ -302,7 +302,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-82',
         name: 'Smoked Catfish',
-        price: '2500 Naira',
+        price: '2500',
         description: '20kg of smoked Catfish',
         image: SmokedFish,
         category: 'Livestock',
@@ -311,7 +311,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-83',
         name: 'Mackerel Fish',
-        price: '25000 Naira',
+        price: '25000',
         description: '20kg of mackerel fish',
         image: MackerelFish,
         category: 'Livestock',
@@ -320,7 +320,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-84',
         name: 'Salmon',
-        price: '1500 Naira',
+        price: '1500',
         description: '10kg of salmon',
         image: SalmonImage,
         category: 'Livestock',
@@ -329,7 +329,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-101',
         name: 'Broiler',
-        price: '20000 Naira',
+        price: '20000',
         description: '5 5weeks old broilers',
         image: BroilerImage,
         category: 'Livestock',
@@ -338,7 +338,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-102',
         name: 'Chicks',
-        price: '10000 Naira',
+        price: '10000',
         description: '10 2weeks old chicks',
         image:ChicksImage,
         category: 'Livestock',
@@ -347,7 +347,7 @@ import BroilerImage from '../assets/images/Broiler.jpg';
     {
         id: 'product-121',
         name: 'Chicken',
-        price: '1500 Naira',
+        price: '1500',
         description: 'Whole chicken',
         image: WholeChickenImage,
         category: 'Livestock',

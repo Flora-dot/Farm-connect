@@ -4,10 +4,9 @@
 }
 
 .wrapper-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    justify-items: center;
 }
 
 .info {
@@ -34,7 +33,19 @@
 
 
 /* Media queries */
-@media (max-width:500px) {
-    
-    
+@media (max-width:780px) {
+    .wrapper-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:600px) {
+    .info-wrapper {
+        padding: 20px;
+    }
+
+    .wrapper-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
 }

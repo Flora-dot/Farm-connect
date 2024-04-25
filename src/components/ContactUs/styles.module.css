@@ -21,7 +21,7 @@
     background-color: var(--primary-color-green);
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     padding: 49px ;
     justify-content: center;
     align-items: center;
@@ -29,6 +29,10 @@
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    
 }
 
  .divider h3{
@@ -68,11 +72,8 @@
 
 .wrapper{
     width: 80%;
-    /* border: 1px solid black; */
-    position: relative;
-    /* bottom:  -10%; */
     margin: 0 auto;
-    padding: 0 49px 59px ;
+    padding: 150px 49px 59px ;
     z-index: 1;
 }
 
@@ -128,7 +129,6 @@
 }
 
 .inputFeild{
-    /* background-color: bisque; */
     width: 100%;
     margin-top: 20px;
 }
@@ -152,15 +152,12 @@
 }
 
 form{
-    /* background-color: red; */
     margin-top: 30px;
 }
 
 form .userImputfield{
     width: 100%;
     display: flex;
-    /* background-color: aqua; */
-    /* flex-basis: 50%; */
     margin-bottom: 20px;
     
 }
@@ -169,7 +166,6 @@ form .userImputfield div{
     flex-basis: 50%;
     position: relative;
     width: 100%;
-    /* background-color: blue; */
     gap: 20px;
 }
 
@@ -233,13 +229,15 @@ textarea{
 
 @media  (max-width: 1024px) {
     .wrapper{
-        /* width: 95%; */
-        /* border: 1px solid black; */
          bottom: 15%;
     }
 }
 
 @media  (max-width: 800px) {
+    .divider{
+        top: 25%;
+    }
+
     form .userImputfield {
         flex-direction: column;
     }
@@ -249,19 +247,20 @@ textarea{
     .container .contactImg{
         height: 300px;
     }
+    .divider {
+        top: 10%;
+    }
+
     .wrapper{
         width: 95%;
-        /* border: 1px solid black; */
          bottom: 20%;
         display: flex;
-        padding: 15px;
+        /* padding: 15px; */
         flex-direction: column;
         gap: 15px;
     }
 
     form{
-        /* background-color: red; */
-        /* margin-top: 30px; */
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -297,7 +296,6 @@ textarea{
     .copyWrite div{
         width: auto;
         position: relative;
-        /* background-color: aqua; */
         flex-direction: column-reverse;
         text-align: center;
         justify-content: center;
@@ -312,13 +310,11 @@ textarea{
 
     .copyWrite div ul{
         flex-direction: column;
-        /* padding-bottom: 20px; */
         margin-top: 50px;
     }
 
     
     .copyWrite {
-        /* width: 22.5rem; */
         width: 100vw;
         padding: 0;
         justify-content: center;
@@ -331,7 +327,6 @@ textarea{
         position: relative;
         flex-direction: column;
         margin: 10px auto;
-        /* background-color: red; */
         text-align: center;
         justify-content: center;
         align-items: center;

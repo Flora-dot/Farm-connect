@@ -3,6 +3,7 @@ import {Products} from '../../../components/LatestOffers/data';
 import FiveStarIcons from "../../../assets/icons/five-star-icon.svg";
 import Header from '../../../components/Header/Header';
 import { Footer } from '../../../components/Footer';
+import { Link } from "react-router-dom";
 
 export const DealsOfTheDay = () => {
     return(
@@ -14,11 +15,14 @@ export const DealsOfTheDay = () => {
         {Products.map((product) => (
                 <div className={style["product-card"]}>
                 <div className={style.details}>
+                <Link to='/ProductDetail'>
                   <img
                     src={product.image}
                     alt=""
                     className={style["product-image"]}
+                    loading="lazy"
                   />
+                  </Link>
                    <div className={style["card-details"]}>
                 <h1>{product.title}</h1>
                 <h2>{product.description}</h2>

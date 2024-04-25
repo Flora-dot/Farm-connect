@@ -10,7 +10,7 @@ export const popularItems = [
     image: WholeChicken,
     title: ' Whole chicken',
     description: 'Sweet and soft',
-    price: 'N 3000 Per one',
+    price: '3000 Per one',
     stars: '****',
     reviews: '(201) Reviews',
   },
@@ -19,45 +19,45 @@ export const popularItems = [
     image: FreshSandinas,
     title: 'Fresh Sardines',
     description: 'Fresh out of water',
-    price: 'N 3000 Per Kilo',
+    price: '3000 Per Kilo',
   },
   {
     image: Berries,
     title: 'Juicy Strawberries',
     description: 'Sweet juicy strawberries',
-    price: 'N 3000 Per Pack',
+    price: '3000 Per Pack',
   },
 
   {
     image: RainBowCarrot,
     title: 'Rainbow Carrots',
     description: 'Clean and juicy carrots',
-    price: 'N 3000 Per Bucket',
+    price: '3000 Per Bucket',
   },
   {
     image: JuicyGinger,
     title: 'Juicy Ginger',
     description: 'Fresh organic ginger',
-    price: 'N 3000 Per Bucket',
+    price: '3000 Per Bucket',
   },
 
   {
     image: RainBowCarrot,
     title: 'Rainbow Carrots',
     description: 'Clean and juicy carrots',
-    price: 'N 3000 Per Bucket',
+    price: '3000 Per Bucket',
   },
   {
     image: Yam,
     title: 'Fresh Ghana Yam',
     description: 'Big and fleshy yam',
-    price: 'N 3000 Per Per one',
+    price: '3000 Per Per one',
   },
 
   {
     image: Berries,
     title: 'Juicy  Strawberries',
     description: 'Sweet juicy strawberries',
-    price: 'N 3000 Per Pack',
+    price: '3000 Per Pack',
   },
 ];

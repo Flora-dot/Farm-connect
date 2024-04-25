@@ -17,7 +17,9 @@ export const ProductDetail = () => {
         setCount( count + 1)
     }
     const handleDecreament = () => {
-        setCount( count - 1)
+        if(count > 0){
+            setCount( count - 1)
+        }
     }
     return (
        <section className={styles.container}>
@@ -31,7 +33,7 @@ export const ProductDetail = () => {
                 </div>
                 <div className={styles.rightcontent}>
                     <div className={styles.header}>
-                        <h6>Organic Grown Cassava</h6>
+                        <h6>Cassava</h6>
                         <p className={styles.pragraph}>This is a clean and study cassava root grown organically</p>
                         <p><img src={Star} alt="Star" />  (201) Reviews</p>
                     </div>

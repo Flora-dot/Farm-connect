@@ -314,7 +314,9 @@ li .header-menu-content:hover {
         width: 100%;
     }
     
-
+    .menu ul li hr{
+        width: fit-content;
+    }
     .search-wrapper .filter {
         display: none;
     }

@@ -99,8 +99,8 @@
 }
 
 @media (max-width:840px) {
-    .deals  {
-        padding: 30px 50px;
+    .offers  {
+        padding: 30px 20px;
     }
     .products-display {
         grid-template-columns: repeat(3, 1fr);

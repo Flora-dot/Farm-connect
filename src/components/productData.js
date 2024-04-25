@@ -46,7 +46,7 @@ import WholeChickenImage from '../assets/images/chicken.png'
 import BroilerImage from '../assets/images/Broiler.jpg';
 
 
-const products = [
+ const products = [
     {
         id: 'product-1',
         name: 'Yam',
@@ -111,7 +111,7 @@ const products = [
         subcategory: 'Grains and cereals',
     },
     {
-        id: 'product-23',
+        id: 'product-24',
         name: 'Beans',
         price: '5000 Naira',
         description: '1kg of beans',
@@ -120,7 +120,7 @@ const products = [
         subcategory: 'Grains and cereals',
     },
     {
-        id: 'product-24',
+        id: 'product-25',
         name: 'Rice',
         price: '10000 Naira',
         description: 'Small bag of rice',
@@ -139,10 +139,10 @@ const products = [
     },
     {
         id: 'product-42',
-        name: 'Lime',
-        price: '15000 Naira',
-        description: '50 pieces of Lime',
-        image: LimeImage,
+        name: 'Strawberries',
+        price: '7000 Naira',
+        description: '1kg of strawberries',
+        image: StrawberryImage,
         category: 'Fruits and Veggies',
         subcategory: 'Fruits',
     },
@@ -175,10 +175,10 @@ const products = [
     },
     {
         id: 'product-46',
-        name: 'Strawberries',
-        price: '7000 Naira',
-        description: '1kg of strawberries',
-        image: StrawberryImage,
+        name: 'Lime',
+        price: '15000 Naira',
+        description: '50 pieces of Lime',
+        image: LimeImage,
         category: 'Fruits and Veggies',
         subcategory: 'Fruits',
     },
@@ -354,3 +354,6 @@ const products = [
         subcategory: 'Meat',
     },
 ]
+
+export default products;
+

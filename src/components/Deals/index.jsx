@@ -11,7 +11,7 @@ export const Deals = () => {
         <h6>Deals of the Day</h6>
         <Link to='/DealsPage'><img src={RightArrowIcon} alt="" /></Link>
         </div>
-        <div className={style['products-display']}>
+        <div  className={style['products-display']}>
         {Products.map((product) => (
                 <div className={style["product-card"]}>
                 <div className={style.details}>

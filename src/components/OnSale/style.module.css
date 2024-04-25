@@ -1,6 +1,6 @@
 .sales {
     width: 100%;
-    padding: 30px 70px;
+    padding: 30px 70px 70px;
     background-color: var(--Neutral-grey);
 }
 
@@ -21,7 +21,7 @@
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    row-gap: 50px;
+    row-gap: 90px;
 }
 
 .product-card {

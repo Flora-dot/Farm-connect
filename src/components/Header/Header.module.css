@@ -207,7 +207,11 @@ li .header-menu-content:hover {
     }
 }
 
-@media (max-width:920px) {
+@media (max-width:930px) {
+    .header {
+        padding: 20px 40px;
+    }
+
     li .header-menu-content {
         font-size: 14px;
     }
@@ -239,6 +243,58 @@ li .header-menu-content:hover {
     }
 }
 
+@media (max-width:720px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .menu ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-white);
+        text-align: center;
+        gap: 5px;
+        animation: fadeIn 1s linear;
+    }
+    
+    @keyframes fadeIn {
+        from{
+            opacity: 0.5;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    li .header-menu-content {
+        border-bottom: 1px solid var(--primary-color-green);
+        font-weight: 500;
+    }
+
+    .menu ul li{
+        padding: 10px 0;
+    }
+
+    .menu ul li:hover {
+        background-color: var(--light-color-green);
+    }
+
+    .menu ul.mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .menu ul li hr{
+        width: fit-content;
+    }
+    .search-wrapper .filter {
+        display: none;
+    }
+}
+
 @media (max-width:600px) {
     .header {
         padding: 10px 20px ;
@@ -266,7 +322,6 @@ li .header-menu-content:hover {
     }
 
     .header .account {
-        /* flex-direction: column; */
         order: -1;
         gap: 15px;
     }

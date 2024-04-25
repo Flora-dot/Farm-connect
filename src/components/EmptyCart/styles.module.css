@@ -1,8 +1,6 @@
 .frame{
     position: relative;
     width: 900px;
-    /* height: 709px; */
-    /* background-color: red; */
     margin: 5% auto;
     position: relative;
     display: flex;
@@ -30,6 +28,10 @@
     align-items: center;
     text-align: center;
     /* background-color: blue; */
+}
+
+.cartImage {
+    width: 100%;
 }
 
 .shopBtn{
@@ -60,3 +62,28 @@
 
 
 
+/* Media Queries */
+@media (max-width:900px) {
+    .frame {
+        width: 700px;
+    }
+}
+
+
+@media (max-width:800px) {
+    .frame {
+        width: 600px;
+    }
+}
+
+@media (max-width:600px) {
+    .frame {
+        width: 400px;
+    }
+}
+
+@media (max-width:400px) {
+    .frame {
+        width: 250px;
+    }
+}

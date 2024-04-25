@@ -1,4 +1,4 @@
-import { EmptyCartPage } from "../../components/CartFeild"
+import { EmptyCartPage } from "../../components/EmptyCart"
 import { Footer } from "../../components/Footer"
 import Header from "../../components/Header/Header"
 

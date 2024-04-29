@@ -13,8 +13,8 @@ import { FarmerProfile } from "./pages/FarmerProfile";
 import { LatestOffersPage } from "./pages/LatestOffersPage";
 import { DealsOfTheDay } from "./pages/DealsPage/DealsOfDay";
 import { PopularItems } from "./pages/PopularItemsPage/";
-import { EmptyCart } from "./pages/EmptyCart";
 import { ProductCategoryPage } from "./pages/ProductCategoryPage";
+import { Cart } from "./pages/Cart";
 
 function App() {
   return (
@@ -43,8 +43,12 @@ function App() {
           element={<ProductCategoryPage category="Livestock" />}
         />
         <Route path="/Farmerprofile" element={<FarmerProfile />} />
-        <Route path="/ProductDetail" element={<ProductDetails />} />
-        <Route path="/EmptyCart" element={<EmptyCart />} />
+        <Route path="/ProductDetail" element={<ProductDetails />}>
+            <Route path=":productId" element={<ProductDetails />} />
+          </Route>
+
+        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

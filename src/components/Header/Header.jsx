@@ -6,18 +6,18 @@ import ArrowDownIcon from "../../assets/icons/arrow-down-icon.svg";
 import ShoppingBagIcon from "../../assets/icons/shopping-bag-icon.svg";
 import TruckIcon from "../../assets/icons/truck-icon.svg";
 import SearchIcon from "../../assets/icons/search-icon.svg";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import style from "./Header.module.css";
 import { ReactComponent as MenuIcon } from "../../assets/icons/menu-icon.svg";
 import { auth } from "../../firebase/firebaseConfig";
 import { signOut } from "firebase/auth";
 import { toast } from "react-toastify";
+import { ShopContext } from "../../Context/ShopContext";
 
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [logUserOut, setLogUserOut] = useState(false);
 
-  // check if user is logged in
   useEffect(() => {
     const checkSignIn = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -53,6 +53,12 @@ export default function Header() {
   };
 
   const [openMenu, setOpenMenu] = useState(false);
+
+  const { cartItems } = useContext(ShopContext);
+  const itemCount = Object.values(cartItems).reduce(
+    (total, count) => total + count,
+    0
+  );
 
   return (
     <header className={style.header}>
@@ -142,9 +148,14 @@ export default function Header() {
               </div>
             )}
             <img src={TruckIcon} alt="" />
-            <Link to="/EmptyCart">
-              <img src={ShoppingBagIcon} alt="" />
+            <div>
+            <Link to="/Cart">
+                <img src={ShoppingBagIcon} alt="" />
             </Link>
+            {itemCount > 0 && (
+                  <span className={style["cart-counter"]}>{itemCount}</span>
+                )}
+            </div>
             <MenuIcon
               className={style["menu-icon"]}
               onClick={() => {

@@ -2,7 +2,7 @@ import CartImage from '../../assets/images/cart-image.svg'
 import styles from './styles.module.css'
 
 
-export const EmptyCartPage = () => {
+export const EmptyCart = () => {
     return(
         <div className={styles.frame}>
             <h4>Opps! Your cart is empty,kindly add an item.</h4>

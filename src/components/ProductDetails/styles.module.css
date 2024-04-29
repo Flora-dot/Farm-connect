@@ -229,7 +229,7 @@
 }
 
 .cardWrapper{
-    position: relative;
+    /* position: relative; */
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -239,7 +239,6 @@
 
 .cardContainer{
     width: 100%;
-    height: 1254px;
     margin-top: 30px;
     justify-content: center;
     align-items: center;

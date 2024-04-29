@@ -15,15 +15,11 @@ export function ProductDisplay (props) {
             props.category === product.category &&
             (!props.subcategory || props.subcategory === product.subcategory)
           ) {
-            console.log(
-              "Product matched category and subcategory:",
-              props.category,
-              props.subcategory
-            );
+          
             return (
               <div key={product.id} className={style["product-card"]}>
                 <div className={style.details}>
-                  <Link to='/ProductDetail'>
+                  <Link to={`/ProductDetail/${product.id}`}>
                   <img
                     src={product.image}
                     alt=""
@@ -46,8 +42,6 @@ export function ProductDisplay (props) {
           } else {
             console.log(
               "Product did not match category or subcategory:",
-              props.category,
-              props.subcategory
             );
             return null;
           }

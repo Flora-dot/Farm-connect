@@ -189,6 +189,11 @@ li .header-menu-content:hover {
 }
 
 
+.cart-counter {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--primary-color-green);
+}
 
 
 /* Media queries */

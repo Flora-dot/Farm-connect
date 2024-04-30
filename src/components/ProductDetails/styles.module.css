@@ -35,7 +35,7 @@
 .rightcontent .header{
     display: inline-flex;
     flex-direction: column;
-    width: 503px;
+    /* width: 503px; */
     margin: 0;
 }
 
@@ -271,7 +271,7 @@ button .farmer {
     }
 
     .wrapper .leftcontent{
-        width: 90vw ;
+        width: 100%;
         justify-content: center;
         align-items: center;
         text-align: center;

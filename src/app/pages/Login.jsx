@@ -51,7 +51,6 @@ export function Login() {
         setTimeout(() => {
           window.location.href = "/";
         }, 1000);
-        localStorage.setItem('user');
         // ...
       })
       .catch((error) => {

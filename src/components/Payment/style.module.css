@@ -1,0 +1,239 @@
+.payment {
+    width: 100%;
+    padding: 80px 80px;
+    display: flex;
+    gap: 60px;
+}
+
+.payment-info {
+    width: 60%;
+    padding: 50px 15px 70px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Customer Information */
+.customer-info {
+    width: 100%;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.customer-info label {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.customer-info input {
+    height: 42px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #D4DCD7;
+    margin-bottom: 20px;
+}
+
+.customer-info input::placeholder {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.payment-info .title {
+    border-bottom: 1px solid #D4DCD7;
+    padding: 0 0 30px;  
+}
+
+.payment-info .title h1,
+.card-details .title h1{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+
+/* Choose Payment section */
+.payment-option {
+    width: 100%;
+    padding: 50px 15px 50px;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.payment-option .details {
+    padding: 20px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.payment-option .details div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.payment-option input,
+.save input {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    background-color: #D4DCD7;
+}
+
+.payment-option input:checked {
+    accent-color: var(--primary-color-green);
+}
+
+.payment-option .details div label{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+
+/* Card details */
+.card-details {
+    width: 40%;
+    padding: 50px 25px 70px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.10);
+}
+
+.card-details .title {
+    border-bottom: 1px solid #D4DCD7;
+    padding: 0 0 30px;  
+}
+
+.payment-cards {
+    margin-top: 10px;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.card-details label {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.card-details input {
+    height: 42px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #D4DCD7;
+    margin-bottom: 20px;
+}
+
+.card-details input::placeholder {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.card-details .number {
+    margin: 20px 0 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-details .number div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.save {
+    display: flex;
+    gap: 10px;
+}
+
+.save input:checked {
+    accent-color: var(--primary-color-green);
+}
+
+
+.save label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    color: var(--color-black);
+}
+
+.card-details button {
+    text-align: center;
+    height: 48px;
+    padding: 10px 12px;
+    background-color: var(--primary-color-green);
+    border-radius: 4px;
+    border: none;
+    color: var(--color-white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 20px;
+}
+
+
+/* Media queries */
+@media (max-width:1024px) {
+    .payment {
+        gap: 30px;
+        padding: 80px 50px;
+    } 
+}
+
+
+@media (max-width:800px) {
+    .payment {
+        gap: 30px;
+        padding: 80px 30px;
+    } 
+}
+
+
+@media (max-width:600px) {
+    .payment {
+        flex-direction: column;
+        padding: 80px 2 0px;
+    }
+
+    .payment-info {
+        width: 100%;
+    }
+
+    .customer-info,
+    .payment-option {
+        width: 100%;
+    }
+
+    .cart-item .details {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    .delivery-wrapper {
+        width: 100%;
+    }
+}
+

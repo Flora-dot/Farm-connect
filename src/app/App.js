@@ -15,6 +15,7 @@ import { DealsOfTheDay } from "./pages/DealsPage/DealsOfDay";
 import { PopularItems } from "./pages/PopularItemsPage/";
 import { ProductCategoryPage } from "./pages/ProductCategoryPage";
 import { Cart } from "./pages/Cart";
+import { PaymentPage } from "./pages/PaymentPage";
 
 function App() {
   return (
@@ -48,7 +49,7 @@ function App() {
           </Route>
 
         <Route path="/Cart" element={<Cart />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Payment" element={<PaymentPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

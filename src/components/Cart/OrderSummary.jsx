@@ -3,6 +3,7 @@ import CustomButton from '../CustomButton';
 import { ItemSummryCard } from './ItemSummaryCard';
 import style from './style.module.css';
 import { ShopContext } from '../../Context/ShopContext';
+import { Link } from 'react-router-dom';
 
 export const OrderSummary = () => {
 
@@ -34,7 +35,7 @@ export const OrderSummary = () => {
                 <h6>Total</h6>
                 <h6>{total}</h6>
                </div>
-               <CustomButton>Checkout</CustomButton>
+               <CustomButton><Link to='/Payment' className={style.checkout}>Checkout</Link></CustomButton>
         </section>
     )
 }
